@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: $clr-text-dark;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $clr-bg-body;
+  max-width: 1440px;
+  margin: 2rem auto 4rem;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+
+  & > section {
+    padding: 0 4rem 0;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.accent {
+  color: $clr-text-accent;
+  font-style: italic;
+}
