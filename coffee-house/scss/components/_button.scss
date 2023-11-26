@@ -1,0 +1,27 @@
+%button {
+  background-color: $clr-bg-body;
+  border-radius: 10rem;
+  border: none;
+  font-weight: 600;
+  line-height: 1.5;
+  max-width: 20rem;
+  font-size: inherit;
+
+  & > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  // &:hover {
+
+  // }
+}
+
+.button-primary {
+  @extend %button;
+
+  padding: 2rem 7.8rem;
+
+}
