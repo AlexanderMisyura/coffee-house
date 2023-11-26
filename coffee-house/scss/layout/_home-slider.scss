@@ -1,0 +1,7 @@
+.favorite-coffee {
+  display: flex;
+
+  & > h2 {
+    text-align: center;
+  }
+}
