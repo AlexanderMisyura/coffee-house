@@ -36,23 +36,22 @@
   border-radius: 4rem;
   background-size: cover;
   background-image: url("./assets/img-hero.jpg");
-}
 
-.offer {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  max-width: 53rem;
+  & > .offer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 53rem;
 
-  h1 {
-    color: $clr-text-light;
-    font-size: 7.2rem;
-    line-height: 1.05;
+    h1 {
+      color: $clr-text-light;
+      font-size: 7.2rem;
+      line-height: 1.05;
+    }
+
+    p {
+      color: $clr-text-light;
+      line-height: 1.5;
+    }
   }
-
-  p {
-    color: $clr-text-light;
-    line-height: 1.5;
-  }
-
 }
