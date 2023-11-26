@@ -1,8 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: #403f3d;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #e1d4c9;
+  max-width: 1440px;
+  margin: 2rem auto 4rem;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+body > section {
+  padding: 0 4rem 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.accent {
+  color: #b0907a;
+  font-style: italic;
+}
+
+.button-primary {
+  background-color: #e1d4c9;
+  border-radius: 10rem;
+  border: none;
+  font-weight: 600;
+  line-height: 1.5;
+  max-width: 20rem;
+  font-size: inherit;
+}
+.button-primary > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.button-primary {
+  padding: 2rem 7.8rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.nav {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.coffee-menu {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.logo > a,
+.logo img {
+  display: block;
+}
+
+.hero {
+  width: 100%;
+  padding: 10rem;
+  border-radius: 4rem;
+  background-size: cover;
+  background-image: url("./assets/img-hero.jpg");
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 53rem;
+}
+.offer h1 {
+  color: #e1d4c9;
+  font-size: 7.2rem;
+  line-height: 1.05;
+}
+.offer p {
+  color: #e1d4c9;
+  line-height: 1.5;
 }
