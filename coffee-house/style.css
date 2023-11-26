@@ -236,3 +236,45 @@ h3 {
 .slider-row p {
   text-align: center;
 }
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.image-box {
+  display: flex;
+  gap: 4rem;
+}
+.image-box > .image-column {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.about-image,
+.about-image-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.about-image > img,
+.about-image-small > img {
+  transition: all 0.3s ease-in;
+}
+.about-image:hover > img,
+.about-image-small:hover > img {
+  transform: scale(0.91);
+}
+
+.about-image {
+  height: 59rem;
+}
+
+.about-image-small {
+  height: 43rem;
+}

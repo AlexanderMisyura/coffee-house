@@ -1,0 +1,41 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.image-box {
+  display: flex;
+  gap: 4rem;
+
+  & > .image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.about-image,
+.about-image-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66rem;
+  border-radius: 2rem;
+  overflow: hidden;
+
+  & > img {
+    transition: $transition;
+  }
+
+  &:hover > img {
+    transform: scale(0.91);
+  }
+}
+
+.about-image {
+  height: 59rem;
+}
+.about-image-small {
+  height: 43rem;
+}
