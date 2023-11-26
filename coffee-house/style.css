@@ -18,6 +18,8 @@ body {
   max-width: 1440px;
   margin: 2rem auto 4rem;
   font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
   display: flex;
   flex-direction: column;
   gap: 10rem;
@@ -32,6 +34,24 @@ li {
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  font-size: 7.2rem;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: 6rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 .accent {
@@ -57,6 +77,17 @@ a {
 
 .button-primary {
   padding: 2rem 7.8rem;
+}
+
+.button-icon {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  border: 0.1rem solid #665f55;
+  background-color: transparent;
 }
 
 .header {
@@ -111,4 +142,97 @@ a {
 .offer p {
   color: #e1d4c9;
   line-height: 1.5;
+}
+
+.button-primary {
+  background-color: #e1d4c9;
+  border-radius: 10rem;
+  border: none;
+  font-weight: 600;
+  line-height: 1.5;
+  max-width: 20rem;
+  font-size: inherit;
+}
+.button-primary > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.button-primary {
+  padding: 2rem 7.8rem;
+}
+
+.button-icon {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rem;
+  border: 0.1rem solid #665f55;
+  background-color: transparent;
+}
+
+.favorite-coffee {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.favorite-coffee > h2 {
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.slider > .slider-content {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.slider-controls {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+.slider-controls > .control {
+  width: 4rem;
+  height: 0.4rem;
+  border-radius: 10rem;
+  background-color: #c1b6ad;
+}
+.slider-controls > .control:hover:not(.control-active) {
+  cursor: pointer;
+}
+.slider-controls > .control.control-active {
+  background-color: #665f55;
+}
+
+.slider-row {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.slider-row > img {
+  max-width: 48rem;
+  display: block;
+}
+.slider-row > .slider-item-description {
+  max-width: 48rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+.slider-row p {
+  text-align: center;
 }
