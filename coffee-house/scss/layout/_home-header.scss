@@ -1,0 +1,58 @@
+@import "../components/button";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.nav {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+.coffee-menu {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.logo > a,
+.logo img {
+  display: block;
+}
+
+.hero {
+  width: 100%;
+  padding: 10rem;
+  // height: 64.4rem;
+  border-radius: 4rem;
+  background-size: cover;
+  background-image: url("./assets/img-hero.jpg");
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 53rem;
+
+  h1 {
+    color: $clr-text-light;
+    font-size: 7.2rem;
+    line-height: 1.05;
+  }
+
+  p {
+    color: $clr-text-light;
+    line-height: 1.5;
+  }
+
+}
