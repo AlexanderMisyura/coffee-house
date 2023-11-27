@@ -59,35 +59,66 @@ h3 {
   font-style: italic;
 }
 
-.button-primary {
+.caption {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.button-primary, .button-icon, .button-app-store {
   background-color: #e1d4c9;
   border-radius: 10rem;
   border: none;
   font-weight: 600;
   line-height: 1.5;
-  max-width: 20rem;
+  width: 20rem;
   font-size: inherit;
-}
-.button-primary > * {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
+  transition: all 0.3s ease-in;
+}
+.button-primary *, .button-icon *, .button-app-store * {
+  transition: all 0.3s ease-in;
+}
+
+.button-icon, .button-app-store {
+  background-color: transparent;
+  border: 0.1rem solid #665f55;
+}
+.button-icon:hover, .button-app-store:hover {
+  cursor: pointer;
+  background-color: #665f55;
 }
 
 .button-primary {
   padding: 2rem 7.8rem;
 }
 
+.button-app-store {
+  padding: 1.2rem 2rem;
+  justify-content: flex-start;
+}
+.button-app-store > .btn-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+.button-app-store:hover div {
+  color: #e1d4c9;
+}
+.button-app-store:hover path {
+  fill: #e1d4c9;
+}
+
 .button-icon {
   width: 6rem;
   height: 6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10rem;
-  border: 0.1rem solid #665f55;
-  background-color: transparent;
+}
+.button-icon:hover path {
+  stroke: #e1d4c9;
 }
 
 .header {
@@ -127,52 +158,76 @@ h3 {
   background-size: cover;
   background-image: url("./assets/img-hero.jpg");
 }
-
-.offer {
+.hero > .offer {
   display: flex;
   flex-direction: column;
   gap: 4rem;
   max-width: 53rem;
 }
-.offer h1 {
+.hero > .offer h1 {
   color: #e1d4c9;
   font-size: 7.2rem;
   line-height: 1.05;
 }
-.offer p {
+.hero > .offer p {
   color: #e1d4c9;
   line-height: 1.5;
 }
 
-.button-primary {
+.button-primary, .button-app-store, .button-icon {
   background-color: #e1d4c9;
   border-radius: 10rem;
   border: none;
   font-weight: 600;
   line-height: 1.5;
-  max-width: 20rem;
+  width: 20rem;
   font-size: inherit;
-}
-.button-primary > * {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
+  transition: all 0.3s ease-in;
+}
+.button-primary *, .button-app-store *, .button-icon * {
+  transition: all 0.3s ease-in;
+}
+
+.button-app-store, .button-icon {
+  background-color: transparent;
+  border: 0.1rem solid #665f55;
+}
+.button-app-store:hover, .button-icon:hover {
+  cursor: pointer;
+  background-color: #665f55;
 }
 
 .button-primary {
   padding: 2rem 7.8rem;
 }
 
+.button-app-store {
+  padding: 1.2rem 2rem;
+  justify-content: flex-start;
+}
+.button-app-store > .btn-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+.button-app-store:hover div {
+  color: #e1d4c9;
+}
+.button-app-store:hover path {
+  fill: #e1d4c9;
+}
+
 .button-icon {
   width: 6rem;
   height: 6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10rem;
-  border: 0.1rem solid #665f55;
-  background-color: transparent;
+}
+.button-icon:hover path {
+  stroke: #e1d4c9;
 }
 
 .favorite-coffee {
@@ -277,4 +332,24 @@ h3 {
 
 .about-image-small {
   height: 43rem;
+}
+
+.mobile-app {
+  display: flex;
+  gap: 10rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-app > .offer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.mobile-app > .offer > .app-button-block {
+  display: flex;
+  gap: 2rem;
+}
+.mobile-app > img {
+  display: block;
+  max-width: 63rem;
 }
