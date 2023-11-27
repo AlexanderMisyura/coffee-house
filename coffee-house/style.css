@@ -73,6 +73,10 @@ h3 {
   line-height: 1.4;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .link-underscore-wrapper-dark, .link-underscore-wrapper-light {
   display: flex;
   flex-direction: column;
@@ -139,7 +143,7 @@ h3 {
   display: block;
 }
 
-.button-primary, .button-icon-light, .button-icon, .button-app-store {
+.button-primary, .button-icon-light, .button-icon, .button-app-store, .tab-button {
   background-color: #e1d4c9;
   border-radius: 10rem;
   border: none;
@@ -153,17 +157,52 @@ h3 {
   gap: 0.8rem;
   transition: all 0.3s ease-in;
 }
-.button-primary *, .button-icon-light *, .button-icon *, .button-app-store * {
+.button-primary *, .button-icon-light *, .button-icon *, .button-app-store *, .tab-button * {
   transition: all 0.3s ease-in;
 }
 
-.button-icon-light, .button-icon, .button-app-store {
+.button-icon-light, .button-icon, .button-app-store, .tab-button {
   background-color: transparent;
   border: 0.1rem solid #665f55;
 }
-.button-icon-light:hover, .button-icon:hover, .button-app-store:hover {
+.button-icon-light:hover, .button-icon:hover, .button-app-store:hover, .tab-button:hover {
   cursor: pointer;
   background-color: #665f55;
+}
+
+.tab-button {
+  padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.8rem;
+  width: fit-content;
+}
+.tab-button > .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.3rem 0.7rem;
+  background-color: #c1b6ad;
+  border-radius: 10rem;
+}
+.tab-button > .text-container {
+  color: #403f3d;
+}
+.tab-button:not(.active) {
+  border-color: #c1b6ad;
+}
+.tab-button.active:hover {
+  cursor: default;
+}
+.tab-button.active, .tab-button:hover:not(.active) {
+  border-color: #665f55;
+  background-color: #665f55;
+}
+.tab-button.active > .text-container, .tab-button:hover:not(.active) > .text-container {
+  color: #e1d4c9;
 }
 
 .button-primary {
@@ -230,7 +269,7 @@ h3 {
   line-height: 1.5;
 }
 
-.button-primary, .button-app-store, .button-icon, .button-icon-light {
+.tab-button, .button-primary, .button-app-store, .button-icon, .button-icon-light {
   background-color: #e1d4c9;
   border-radius: 10rem;
   border: none;
@@ -244,17 +283,52 @@ h3 {
   gap: 0.8rem;
   transition: all 0.3s ease-in;
 }
-.button-primary *, .button-app-store *, .button-icon *, .button-icon-light * {
+.tab-button *, .button-primary *, .button-app-store *, .button-icon *, .button-icon-light * {
   transition: all 0.3s ease-in;
 }
 
-.button-app-store, .button-icon, .button-icon-light {
+.tab-button, .button-app-store, .button-icon, .button-icon-light {
   background-color: transparent;
   border: 0.1rem solid #665f55;
 }
-.button-app-store:hover, .button-icon:hover, .button-icon-light:hover {
+.tab-button:hover, .button-app-store:hover, .button-icon:hover, .button-icon-light:hover {
   cursor: pointer;
   background-color: #665f55;
+}
+
+.tab-button {
+  padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.8rem;
+  width: fit-content;
+}
+.tab-button > .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.3rem 0.7rem;
+  background-color: #c1b6ad;
+  border-radius: 10rem;
+}
+.tab-button > .text-container {
+  color: #403f3d;
+}
+.tab-button:not(.active) {
+  border-color: #c1b6ad;
+}
+.tab-button.active:hover {
+  cursor: default;
+}
+.tab-button.active, .tab-button:hover:not(.active) {
+  border-color: #665f55;
+  background-color: #665f55;
+}
+.tab-button.active > .text-container, .tab-button:hover:not(.active) > .text-container {
+  color: #e1d4c9;
 }
 
 .button-primary {
@@ -360,6 +434,20 @@ h3 {
   text-align: center;
 }
 
+.scaled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.scaled img {
+  transition: all 0.3s ease-in;
+}
+
+.scale-trigger:hover img {
+  transform: scale(0.91);
+}
+
 .about {
   display: flex;
   flex-direction: column;
@@ -378,20 +466,8 @@ h3 {
 
 .about-image,
 .about-image-small {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 66rem;
   border-radius: 2rem;
-  overflow: hidden;
-}
-.about-image > img,
-.about-image-small > img {
-  transition: all 0.3s ease-in;
-}
-.about-image:hover > img,
-.about-image-small:hover > img {
-  transform: scale(0.91);
 }
 
 .about-image {
@@ -500,4 +576,58 @@ h3 {
 .contacts > .container > .contact-info > .contacts > .contact-item a, .contacts > .container > .contact-info > .contacts > .contact-item .non-link {
   display: flex;
   gap: 0.8rem;
+}
+
+section.product-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+section.product-menu > h2 {
+  text-align: center;
+  max-width: 80rem;
+}
+section.product-menu > .tab-options {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+}
+.product-cards > .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50.6rem;
+  border: 0.1rem solid #c1b6ad;
+  border-radius: 4rem;
+}
+.product-cards > .card > .image {
+  width: 31rem;
+  height: 31rem;
+  border-radius: 4rem;
+  flex-shrink: 0;
+}
+.product-cards > .card > .card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+}
+.product-cards > .card > .card-description > .card-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.2rem;
+  align-self: stretch;
+}
+.product-cards > .card:hover {
+  cursor: pointer;
 }
