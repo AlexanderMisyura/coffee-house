@@ -71,13 +71,27 @@
       color: $clr-text-light;
     }
   }
-
 }
 
 .button-primary {
   @extend %button;
 
   padding: 2rem 7.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  & svg {
+    width: 0;
+    display: block;
+  }
+
+  &:hover {
+    & svg {
+      width: 20px;
+    }
+  }
 }
 
 .button-app-store {

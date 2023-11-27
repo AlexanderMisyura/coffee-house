@@ -208,6 +208,17 @@ h3 {
 
 .button-primary {
   padding: 2rem 7.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+.button-primary svg {
+  width: 0;
+  display: block;
+}
+.button-primary:hover svg {
+  width: 20px;
 }
 
 .button-app-store {
@@ -334,6 +345,17 @@ h3 {
 
 .button-primary {
   padding: 2rem 7.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+.button-primary svg {
+  width: 0;
+  display: block;
+}
+.button-primary:hover svg {
+  width: 20px;
 }
 
 .button-app-store {
