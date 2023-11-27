@@ -3,6 +3,10 @@
   flex-direction: column;
   align-items: center;
 
+  &.active-link:hover {
+    cursor: default;
+  }
+
   &::after {
     content: "";
     width: 0;
@@ -11,21 +15,35 @@
     transition: $transition;
   }
 
-  &:hover::after {
+  &.active-link::after {
+    width: 100%;
+  }
+
+  &:not(.active-link):hover::after {
     width: 100%;
   }
 }
 
 .link-underscore-wrapper-light {
   @extend %link-underscore-wrapper;
-  &:hover::after {
+
+  &.active-link::after {
+    background-color: $clr-text-light;
+  }
+
+  &:not(.active-link):hover::after {
     background-color: $clr-text-light;
   }
 }
 
 .link-underscore-wrapper-dark {
   @extend %link-underscore-wrapper;
-  &:hover::after {
+
+  &.active-link::after {
+    background-color: $clr-text-dark;
+  }
+
+  &:not(.active-link):hover::after {
     background-color: $clr-text-dark;
   }
 }
