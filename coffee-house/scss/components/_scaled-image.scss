@@ -4,11 +4,13 @@
   align-items: center;
   overflow: hidden;
 
-  & > img {
+  &  img {
     transition: $transition;
   }
+}
 
-  &:hover > img {
+.scale-trigger:hover {
+  & img {
     transform: scale(0.91);
   }
 }
