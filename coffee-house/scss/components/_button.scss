@@ -66,3 +66,18 @@
     stroke: $clr-text-light;
   }
 }
+
+.button-icon-light {
+  @extend %button-transparent;
+  width: 6rem;
+  height: 6rem;
+  border-color: $clr-border-light;
+
+  &:hover {
+    background-color: $clr-bg-body;
+  }
+
+  &:hover path {
+    stroke: $clr-text-dark;
+  }
+}
