@@ -29,6 +29,51 @@
   }
 }
 
+.tab-button {
+  @extend %button-transparent;
+
+  padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.8rem;
+  width: fit-content;
+
+  & > .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.3rem 0.7rem;
+    background-color: $clr-border-light;
+    border-radius: 10rem;
+  }
+
+  & > .text-container {
+    color: $clr-text-dark;
+  }
+
+  &:not(.active) {
+    border-color: $clr-border-light;
+  }
+
+  &.active:hover {
+    cursor: default;
+  }
+
+  &.active,
+  &:hover:not(.active) {
+    border-color: $clr-bg-container;
+    background-color: $clr-bg-container;
+
+    & > .text-container {
+      color: $clr-text-light;
+    }
+  }
+
+}
+
 .button-primary {
   @extend %button;
 
