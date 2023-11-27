@@ -1,3 +1,5 @@
+@import "../components/scaled_image";
+
 .about {
   display: flex;
   flex-direction: column;
@@ -17,20 +19,8 @@
 
 .about-image,
 .about-image-small {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 66rem;
   border-radius: 2rem;
-  overflow: hidden;
-
-  & > img {
-    transition: $transition;
-  }
-
-  &:hover > img {
-    transform: scale(0.91);
-  }
 }
 
 .about-image {

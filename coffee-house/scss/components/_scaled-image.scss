@@ -1,0 +1,14 @@
+.scaled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  & > img {
+    transition: $transition;
+  }
+
+  &:hover > img {
+    transform: scale(0.91);
+  }
+}
