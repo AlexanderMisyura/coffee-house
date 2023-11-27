@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Inter, Arial, Helvetica, sans-serif;
-  color: $clr-text-dark;
 }
 
 html {
@@ -55,9 +54,17 @@ h3 {
 }
 
 
-.accent {
+.text-accent {
   color: $clr-text-accent;
   font-style: italic;
+}
+
+.text-dark {
+  color: $clr-text-dark;
+}
+
+.text-light {
+  color: $clr-text-light;
 }
 
 .caption {
