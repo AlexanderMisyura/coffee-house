@@ -4,39 +4,65 @@
   border: none;
   font-weight: 600;
   line-height: 1.5;
-  max-width: 20rem;
+  width: 20rem;
   font-size: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  transition: $transition;
 
-  & > * {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
+  & * {
+    transition: $transition;
   }
+}
 
-  // &:hover {
+%button-transparent {
+  @extend %button;
 
-  // }
+  background-color: transparent;
+  border: 0.1rem solid $clr-border-dark;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $clr-bg-container;
+  }
 }
 
 .button-primary {
   @extend %button;
 
   padding: 2rem 7.8rem;
+}
 
+.button-app-store {
+  @extend %button-transparent;
+
+  padding: 1.2rem 2rem;
+  justify-content: flex-start;
+
+  & > .btn-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  &:hover div {
+    color: $clr-text-light;
+  }
+
+  &:hover path {
+    fill: $clr-text-light;
+  }
 }
 
 .button-icon {
+  @extend %button-transparent;
   width: 6rem;
   height: 6rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10rem;
-  border: 0.1rem solid $clr-border-dark;
-  background-color: transparent;
 
-  // &:hover {
-
-  // }
+  &:hover path {
+    stroke: $clr-text-light;
+  }
 }
