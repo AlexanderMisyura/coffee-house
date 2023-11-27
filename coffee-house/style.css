@@ -10,11 +10,12 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #e1d4c9;
-  max-width: 1440px;
+  width: 1440px;
   margin: 2rem auto 4rem;
   font-size: 1.6rem;
   font-weight: 400;
@@ -23,7 +24,7 @@ body {
   flex-direction: column;
   gap: 10rem;
 }
-body > section {
+body > section, body > header, body > footer {
   padding: 0 4rem 0;
 }
 
@@ -113,7 +114,7 @@ h3 {
   align-items: flex-start;
   gap: 0.2rem;
 }
-.button-app-store:hover div {
+.button-app-store:hover span {
   color: #e1d4c9;
 }
 .button-app-store:hover path {
@@ -258,7 +259,7 @@ h3 {
   align-items: flex-start;
   gap: 0.2rem;
 }
-.button-app-store:hover div {
+.button-app-store:hover span {
   color: #e1d4c9;
 }
 .button-app-store:hover path {
