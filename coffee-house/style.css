@@ -42,7 +42,8 @@ h1 {
   line-height: 1.05;
 }
 
-h2 {
+h2,
+.heading-2 {
   font-size: 6rem;
   font-weight: 600;
   line-height: 1.25;
@@ -584,7 +585,7 @@ section.product-menu {
   gap: 4rem;
   align-items: center;
 }
-section.product-menu > h2 {
+section.product-menu > h1 {
   text-align: center;
   max-width: 80rem;
 }
