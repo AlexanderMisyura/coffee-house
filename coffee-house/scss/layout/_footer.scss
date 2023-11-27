@@ -1,0 +1,53 @@
+@import "../components/link-underscore";
+
+.contacts > .container {
+  border-radius: 4rem;
+  background-color: $clr-bg-container;
+  padding: 10rem;
+  display: grid;
+  gap: 10rem;
+  grid-template-columns: 1fr 1fr;
+
+  & > .offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+
+    & > h2 {
+      font-weight: 600;
+      color: $clr-text-light;
+    }
+
+    & > .social-icons {
+      display: flex;
+      gap: 1.2rem;
+    }
+  }
+
+  & > .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+
+    & > .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+
+      & > .contact-item {
+        display: flex;
+        flex-direction: column;
+        max-width: fit-content;
+        font-weight: 600;
+
+        & a,
+        & .non-link {
+          display: flex;
+          gap: 0.8rem;
+        }
+      }
+    }
+  }
+}
