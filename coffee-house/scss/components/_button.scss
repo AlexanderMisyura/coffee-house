@@ -70,6 +70,10 @@
     & > .text-container {
       color: $clr-text-light;
     }
+
+    & > .icon-container {
+      background-color: $clr-bg-body;
+    }
   }
 }
 
