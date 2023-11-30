@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -19,6 +18,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
   gap: 10rem;
