@@ -625,7 +625,7 @@ section.product-menu > .tab-options {
 
 .product-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 31rem);
   gap: 4rem;
 }
 .product-cards > .card {
@@ -637,7 +637,7 @@ section.product-menu > .tab-options {
   border-radius: 4rem;
 }
 .product-cards > .card > .image {
-  width: 31rem;
+  width: 100%;
   height: 31rem;
   border-radius: 4rem;
   flex-shrink: 0;
@@ -661,3 +661,5 @@ section.product-menu > .tab-options {
 .product-cards > .card:hover {
   cursor: pointer;
 }
+
+/*# sourceMappingURL=style.css.map */
