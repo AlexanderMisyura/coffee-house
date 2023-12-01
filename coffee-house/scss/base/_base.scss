@@ -5,7 +5,6 @@ html {
 
 body {
   background-color: $clr-bg-body;
-  // width: 1440px;
   margin: 2rem auto 4rem;
   font-size: 1.6rem;
   font-weight: 400;
@@ -29,8 +28,7 @@ h1 {
   line-height: 1.05;
 }
 
-h2,
-.heading-2 {
+h2 {
   font-size: 6rem;
   font-weight: 600;
   line-height: 1.25;
@@ -42,20 +40,20 @@ h3 {
   line-height: 1.25;
 }
 
-.text-accent {
+.text_accent {
   color: $clr-text-accent;
   font-style: italic;
 }
 
-.text-dark {
+.text_dark {
   color: $clr-text-dark;
 }
 
-.text-light {
+.text_light {
   color: $clr-text-light;
 }
 
-.caption {
+.text_caption {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.4;
