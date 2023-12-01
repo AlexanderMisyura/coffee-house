@@ -1,10 +1,21 @@
-@import "./abstract/constants";
+@import "abstract/constants";
+@import "base/global";
 
-@import "./base/base";
+// Layouts
+@import "layout/tiles";
+@import "layout/wrapper";
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
-@import url('https://fonts.cdnfonts.com/css/inter?styles=29141');
-
-@import "./pages/home";
-
-@import "./pages/menuCoffee";
+// Components
+@import "components/about";
+@import "components/button";
+@import "components/card";
+@import "components/footer";
+@import "components/header";
+@import "components/hero";
+@import "components/image-scale";
+@import "components/link-underscore";
+@import "components/navigation";
+@import "components/products";
+@import "components/promo";
+@import "components/slider";
+@import "components/tabs";
