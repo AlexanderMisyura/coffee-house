@@ -3,8 +3,9 @@
   flex-direction: column;
   align-items: center;
 
-  &.active-link:hover {
+  &.non-interactive-link:hover > a {
     cursor: default;
+    pointer-events: none;
   }
 
   &::after {
@@ -15,11 +16,11 @@
     transition: $transition;
   }
 
-  &.active-link::after {
+  &.non-interactive-link::after {
     width: 100%;
   }
 
-  &:not(.active-link):hover::after {
+  &:hover::after {
     width: 100%;
   }
 }
@@ -27,11 +28,11 @@
 .link-underscore-wrapper-light {
   @extend %link-underscore-wrapper;
 
-  &.active-link::after {
+  &.non-interactive-link::after {
     background-color: $clr-text-light;
   }
 
-  &:not(.active-link):hover::after {
+  &:not(.non-interactive-link):hover::after {
     background-color: $clr-text-light;
   }
 }
@@ -39,11 +40,11 @@
 .link-underscore-wrapper-dark {
   @extend %link-underscore-wrapper;
 
-  &.active-link::after {
+  &.non-interactive-link::after {
     background-color: $clr-text-dark;
   }
 
-  &:not(.active-link):hover::after {
+  &:not(.non-interactive-link):hover::after {
     background-color: $clr-text-dark;
   }
 }
