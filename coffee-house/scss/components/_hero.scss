@@ -1,0 +1,19 @@
+.hero {
+  margin-bottom: 10rem;
+
+  &__background {
+    padding: 10rem;
+    border-radius: 4rem;
+    background-size: cover;
+    background-position: center;
+    background-image: url("assets/img/img-hero.jpg");
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 53rem;
+  }
+}
+
