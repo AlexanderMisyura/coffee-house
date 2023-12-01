@@ -1,53 +1,64 @@
-@import "../components/link-underscore";
+.footer {
 
-.contacts > .container {
+  &__container {
   border-radius: 4rem;
   background-color: $clr-bg-container;
   padding: 10rem;
   display: grid;
   gap: 10rem;
   grid-template-columns: 1fr 1fr;
+ }
 
-  & > .offer {
+  &__offer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
 
-    & > h2 {
+    h2 {
       font-weight: 600;
       color: $clr-text-light;
     }
 
-    & > .social-icons {
-      display: flex;
-      gap: 1.2rem;
-    }
   }
 
-  & > .contact-info {
+  &__social {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  &__info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
 
-    & > .contacts {
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+
+    & > .contact-item {
       display: flex;
       flex-direction: column;
-      gap: 1.6rem;
+      max-width: fit-content;
+      font-weight: 600;
 
-      & > .contact-item {
+      // & a,
+      & .non-link {
         display: flex;
-        flex-direction: column;
-        max-width: fit-content;
-        font-weight: 600;
-
-        & a,
-        & .non-link {
-          display: flex;
-          gap: 0.8rem;
-        }
+        gap: 0.8rem;
       }
     }
   }
 }
+
+
+
+
+
+
+
