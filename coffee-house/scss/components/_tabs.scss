@@ -1,0 +1,11 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+
+  &__switchers {
+    display: flex;
+    gap: 1.6rem;
+  }
+}
