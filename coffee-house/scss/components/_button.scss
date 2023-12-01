@@ -38,8 +38,9 @@
   justify-content: center;
   gap: 0.8rem;
   width: fit-content;
+  height: 4.6rem;
 
-  & > .icon-container {
+  &__icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,28 +51,28 @@
     border-radius: 10rem;
   }
 
-  & > .text-container {
+  &__text {
     color: $clr-text-dark;
   }
 
-  &:not(.active) {
+  &:not(&_active) {
     border-color: $clr-border-light;
   }
 
-  &.active:hover {
+  &_active:hover {
     cursor: default;
   }
 
-  &.active,
-  &:hover:not(.active) {
+  &_active,
+  &:hover:not(&_active) {
     border-color: $clr-bg-container;
     background-color: $clr-bg-container;
 
-    & > .text-container {
+    .tab-button__text {
       color: $clr-text-light;
     }
 
-    & > .icon-container {
+    .tab-button__icon {
       background-color: $clr-bg-body;
     }
   }
@@ -84,15 +85,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0;
 
   & svg {
+    opacity: 0;
     width: 0;
     display: block;
   }
 
   &:hover {
+    gap: 0.8rem;
     & svg {
+      opacity: 1;
       width: 20px;
     }
   }
@@ -103,6 +107,7 @@
 
   padding: 1.2rem 2rem;
   justify-content: flex-start;
+  height: 6.4rem;
 
   & > .btn-text-container {
     display: flex;
