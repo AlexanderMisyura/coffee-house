@@ -361,7 +361,7 @@ h3 {
   flex-direction: column;
   align-items: center;
 }
-.non-interactive-link.link-underscore-wrapper-dark:hover > a, .non-interactive-link.link-underscore-wrapper-light:hover > a {
+.non-interactive-link.link-underscore-wrapper-dark > a, .non-interactive-link.link-underscore-wrapper-light > a {
   cursor: default;
   pointer-events: none;
 }

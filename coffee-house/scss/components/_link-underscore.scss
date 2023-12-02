@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
 
-  &.non-interactive-link:hover > a {
+  &.non-interactive-link > a {
     cursor: default;
     pointer-events: none;
   }
