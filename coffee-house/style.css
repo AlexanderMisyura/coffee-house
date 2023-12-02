@@ -342,20 +342,6 @@ h3 {
   max-width: 53rem;
 }
 
-.scaled {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.scaled img {
-  transition: all 0.3s ease-in;
-}
-
-.scale-trigger:hover img {
-  transform: scale(0.91);
-}
-
 .link-underscore-wrapper-dark, .link-underscore-wrapper-light {
   display: flex;
   flex-direction: column;
@@ -434,6 +420,19 @@ h3 {
 .promo__image {
   display: block;
   max-width: 63rem;
+}
+
+.scale__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.scale__target {
+  transition: all 0.3s ease-in;
+}
+.scale__trigger:hover .scale__target {
+  transform: scale(0.91);
 }
 
 .slider {

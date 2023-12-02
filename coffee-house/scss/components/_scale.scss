@@ -1,0 +1,18 @@
+.scale {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__target {
+    transition: $transition;
+  }
+
+  &__trigger:hover {
+    & .scale__target {
+      transform: scale(0.91);
+    }
+  }
+}
