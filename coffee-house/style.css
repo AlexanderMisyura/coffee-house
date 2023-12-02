@@ -48,6 +48,12 @@ h2, .products__wrapper h1 {
   line-height: 1.25;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
 h3 {
   font-size: 2.4rem;
   font-weight: 600;
@@ -85,9 +91,6 @@ h3 {
   padding: 0 4rem;
 }
 
-.about {
-  margin-bottom: 10rem;
-}
 .about__wrapper {
   display: flex;
   flex-direction: column;
@@ -271,6 +274,9 @@ h3 {
   cursor: pointer;
 }
 
+.footer {
+  margin-top: 10rem;
+}
 .footer__container {
   border-radius: 4rem;
   background-color: #665f55;
@@ -325,9 +331,6 @@ h3 {
   align-items: center;
 }
 
-.hero {
-  margin-bottom: 10rem;
-}
 .hero__background {
   padding: 10rem;
   border-radius: 4rem;
@@ -385,9 +388,6 @@ h3 {
   align-items: center;
 }
 
-.products {
-  margin-bottom: 10rem;
-}
 .products__wrapper {
   display: flex;
   flex-direction: column;
@@ -399,9 +399,6 @@ h3 {
   max-width: 80rem;
 }
 
-.promo {
-  margin-bottom: 10rem;
-}
 .promo__wrapper {
   display: flex;
   gap: 10rem;
@@ -435,9 +432,6 @@ h3 {
   transform: scale(0.91);
 }
 
-.slider {
-  margin-bottom: 10rem;
-}
 .slider__wrapper {
   display: flex;
   flex-direction: column;
