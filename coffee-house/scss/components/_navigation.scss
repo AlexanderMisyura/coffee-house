@@ -2,4 +2,8 @@
   display: flex;
   gap: 4rem;
   align-items: center;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }

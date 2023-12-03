@@ -23,9 +23,11 @@
   background-color: transparent;
   border: 0.1rem solid $clr-border-dark;
 
-  &:hover {
-    cursor: pointer;
-    background-color: $clr-bg-container;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      background-color: $clr-bg-container;
+    }
   }
 }
 
@@ -63,8 +65,7 @@
     cursor: default;
   }
 
-  &_active,
-  &:hover:not(&_active) {
+  &_active {
     border-color: $clr-bg-container;
     background-color: $clr-bg-container;
 
@@ -74,6 +75,21 @@
 
     .tab-button__icon {
       background-color: $clr-bg-body;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover:not(&_active) {
+      border-color: $clr-bg-container;
+      background-color: $clr-bg-container;
+
+      .tab-button__text {
+        color: $clr-text-light;
+      }
+
+      .tab-button__icon {
+        background-color: $clr-bg-body;
+      }
     }
   }
 }
@@ -93,7 +109,16 @@
     display: block;
   }
 
-  &:hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      gap: 0.8rem;
+      & svg {
+        opacity: 1;
+        width: 20px;
+      }
+    }
+  }
+  @media (hover: none) and (pointer: coarse) {
     gap: 0.8rem;
     & svg {
       opacity: 1;
@@ -115,13 +140,14 @@
     align-items: flex-start;
     gap: 0.2rem;
   }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover span {
+      color: $clr-text-light;
+    }
 
-  &:hover span {
-    color: $clr-text-light;
-  }
-
-  &:hover path {
-    fill: $clr-text-light;
+    &:hover path {
+      fill: $clr-text-light;
+    }
   }
 }
 
@@ -130,8 +156,53 @@
   width: 6rem;
   height: 6rem;
 
-  &:hover path {
-    stroke: $clr-text-light;
+  &_burger {
+    @extend %button-transparent;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 4.4rem;
+    height: 4.4rem;
+    border: 0.1rem solid $clr-border-dark;
+    border-radius: 10rem;
+
+    .burger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 1rem;
+
+      &__top {
+        height: 0.2rem;
+      }
+
+      &__bottom {
+        height: 0.2rem;
+      }
+
+      // &_default {
+
+      // }
+      // &:active {
+      // }
+
+      // &:active,
+      // &__cross {
+      //   .burger__top {
+      //     transform: rotate(45deg) translateX(1.45rem) translateY(-0.15rem);
+      //   }
+
+      //   .burger__bottom {
+      //     transform: rotate(-45deg) translateX(-0.85rem) translateY(-0.7rem);
+      //   }
+      // }
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover path {
+      stroke: $clr-text-light;
+    }
   }
 }
 
@@ -141,11 +212,14 @@
   height: 6rem;
   border-color: $clr-border-light;
 
-  &:hover {
-    background-color: $clr-bg-body;
-  }
+  @media (hover: hover) and (pointer: fine) {
 
-  &:hover path {
-    stroke: $clr-text-dark;
+    &:hover {
+      background-color: $clr-bg-body;
+    }
+
+    &:hover path {
+      stroke: $clr-text-dark;
+    }
   }
 }
