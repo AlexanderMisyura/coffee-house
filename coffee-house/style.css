@@ -106,14 +106,12 @@ h3 {
   gap: 4rem;
 }
 .about__grid__cell {
-  width: 66rem;
   border-radius: 2rem;
-  height: 59rem;
+  aspect-ratio: 1.1186440678;
 }
 .about__grid__cell_small {
-  width: 66rem;
   border-radius: 2rem;
-  height: 43rem;
+  aspect-ratio: 1.5348837209;
 }
 
 .button-primary, .button-icon-light, .button-icon, .button-app-store, .tab-button {
@@ -427,9 +425,11 @@ h3 {
 }
 .scale__target {
   transition: all 0.3s ease-in;
+  transform: scale(1.1);
+  width: 100%;
 }
 .scale__trigger:hover .scale__target {
-  transform: scale(0.91);
+  transform: scale(1);
 }
 
 .slider__wrapper {
