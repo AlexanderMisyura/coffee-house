@@ -1,5 +1,4 @@
 .slider {
-
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -27,6 +26,7 @@
 
   &__image {
     max-width: 48rem;
+    width: 100%;
     display: block;
   }
 
@@ -44,13 +44,17 @@
   }
 
   &__btn-left {
-    position: relative;
-    left: 0.4rem;
+    @media (min-width: 900px) {
+      position: relative;
+      left: 0.4rem;
+    }
   }
 
   &__btn-right {
-    position: relative;
-    right: 0.4rem;
+    @media (min-width: 900px) {
+      position: relative;
+      right: 0.4rem;
+    }
   }
 
   &__controls {
