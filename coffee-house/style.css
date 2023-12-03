@@ -325,8 +325,10 @@ h3 {
 .non-interactive-link.link-underscore-wrapper-dark::after, .non-interactive-link.link-underscore-wrapper-light::after {
   width: 100%;
 }
-.link-underscore-wrapper-dark:hover::after, .link-underscore-wrapper-light:hover::after {
-  width: 100%;
+@media (hover: hover) and (pointer: fine) {
+  .link-underscore-wrapper-dark:hover::after, .link-underscore-wrapper-light:hover::after {
+    width: 100%;
+  }
 }
 
 .link-underscore-wrapper-light.non-interactive-link::after {
@@ -359,8 +361,10 @@ h3 {
     transform: scale(1.055);
   }
 }
-.scale__trigger:hover .scale__target {
-  transform: scale(1);
+@media (hover: hover) and (pointer: fine) {
+  .scale__trigger:hover .scale__target {
+    transform: scale(1);
+  }
 }
 
 .about__wrapper {

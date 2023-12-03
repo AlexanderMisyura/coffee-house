@@ -16,9 +16,12 @@
     }
   }
 
-  &__trigger:hover {
-    & .scale__target {
-      transform: scale(1);
+  @media (hover: hover) and (pointer: fine) {
+
+    &__trigger:hover {
+      & .scale__target {
+        transform: scale(1);
+      }
     }
   }
 }
