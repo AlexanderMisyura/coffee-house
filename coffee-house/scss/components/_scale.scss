@@ -8,11 +8,17 @@
 
   &__target {
     transition: $transition;
+    transform: scale(1.1);
+    width: 100%;
+
+    @media (max-width: 900px) {
+      transform: scale(1.055);
+    }
   }
 
   &__trigger:hover {
     & .scale__target {
-      transform: scale(0.91);
+      transform: scale(1);
     }
   }
 }

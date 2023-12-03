@@ -10,6 +10,10 @@
     display: flex;
     gap: 4rem;
 
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+
     &__column {
       display: flex;
       flex-direction: column;
@@ -17,19 +21,21 @@
     }
 
     &__cell {
-      width: 66rem;
       border-radius: 2rem;
-      height: 59rem;
+      aspect-ratio: $img-big-aspect-ratio-desktop;
+
+      @media (max-width: 900px) {
+        aspect-ratio: $img-big-aspect-ratio-tablet;
+      }
 
       &_small {
-        width: 66rem;
         border-radius: 2rem;
-        height: 43rem;
+        aspect-ratio: $img-small-aspect-ratio-desktop;
+
+        @media screen and (max-width: 900px) {
+          display: none;
+        }
       }
     }
-
   }
-
 }
-
-

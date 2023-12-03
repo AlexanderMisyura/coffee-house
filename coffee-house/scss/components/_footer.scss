@@ -7,7 +7,11 @@
   padding: 10rem;
   display: grid;
   gap: 10rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+  @media (max-width: 900px) {
+    padding: 10rem 6rem;
+  }
  }
 
   &__offer {
@@ -47,12 +51,6 @@
       flex-direction: column;
       max-width: fit-content;
       font-weight: 600;
-
-      // & a,
-      & .non-link {
-        display: flex;
-        gap: 0.8rem;
-      }
     }
   }
 }
