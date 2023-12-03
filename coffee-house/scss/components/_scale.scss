@@ -8,11 +8,13 @@
 
   &__target {
     transition: $transition;
+    transform: scale(1.1);
+    width: 100%;
   }
 
   &__trigger:hover {
     & .scale__target {
-      transform: scale(0.91);
+      transform: scale(1);
     }
   }
 }
