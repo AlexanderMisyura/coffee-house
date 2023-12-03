@@ -28,6 +28,10 @@ body {
   flex-direction: column;
 }
 
+.text-link-like {
+  margin-bottom: 0.4rem;
+}
+
 .text-link-like,
 a {
   text-decoration: none;
@@ -89,29 +93,6 @@ h3 {
   max-width: 1440px;
   margin: auto;
   padding: 0 4rem;
-}
-
-.about__wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-.about__grid {
-  display: flex;
-  gap: 4rem;
-}
-.about__grid__column {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-.about__grid__cell {
-  border-radius: 2rem;
-  aspect-ratio: 1.1186440678;
-}
-.about__grid__cell_small {
-  border-radius: 2rem;
-  aspect-ratio: 1.5348837209;
 }
 
 .button-primary, .button-icon-light, .button-icon, .button-app-store, .tab-button {
@@ -272,81 +253,11 @@ h3 {
   cursor: pointer;
 }
 
-.footer {
-  margin-top: 10rem;
-}
-.footer__container {
-  border-radius: 4rem;
-  background-color: #665f55;
-  padding: 10rem;
-  display: grid;
-  gap: 10rem;
-  grid-template-columns: 1fr 1fr;
-}
-.footer__offer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4rem;
-}
-.footer__offer h2, .footer__offer .products__wrapper h1, .products__wrapper .footer__offer h1 {
-  font-weight: 600;
-  color: #e1d4c9;
-}
-.footer__social {
-  display: flex;
-  gap: 1.2rem;
-}
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4rem;
-}
-.footer__contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.6rem;
-}
-.footer__contacts > .contact-item {
-  display: flex;
-  flex-direction: column;
-  max-width: fit-content;
-  font-weight: 600;
-}
-.footer__contacts > .contact-item .non-link {
-  display: flex;
-  gap: 0.8rem;
-}
-
-.header {
-  margin-bottom: 2rem;
-}
-.header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hero__background {
-  padding: 10rem;
-  border-radius: 4rem;
-  background-size: cover;
-  background-position: center;
-  background-image: url("assets/img/img-hero.jpg");
-}
-.hero__text {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  max-width: 53rem;
-}
-
 .link-underscore-wrapper-dark, .link-underscore-wrapper-light {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.2rem;
 }
 .non-interactive-link.link-underscore-wrapper-dark > a, .non-interactive-link.link-underscore-wrapper-light > a {
   cursor: default;
@@ -380,6 +291,141 @@ h3 {
   background-color: #403f3d;
 }
 
+.scale__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.scale__target {
+  transition: all 0.3s ease-in;
+  transform: scale(1.1);
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .scale__target {
+    transform: scale(1.055);
+  }
+}
+.scale__trigger:hover .scale__target {
+  transform: scale(1);
+}
+
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.about__grid {
+  display: flex;
+  gap: 4rem;
+}
+@media screen and (max-width: 900px) {
+  .about__grid {
+    flex-direction: column;
+  }
+}
+.about__grid__column {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.about__grid__cell {
+  border-radius: 2rem;
+  aspect-ratio: 1.1186440678;
+}
+@media (max-width: 900px) {
+  .about__grid__cell {
+    aspect-ratio: 1.1661016949;
+  }
+}
+.about__grid__cell_small {
+  border-radius: 2rem;
+  aspect-ratio: 1.5348837209;
+}
+@media screen and (max-width: 900px) {
+  .about__grid__cell_small {
+    display: none;
+  }
+}
+
+.footer {
+  margin-top: 10rem;
+}
+.footer__container {
+  border-radius: 4rem;
+  background-color: #665f55;
+  padding: 10rem;
+  display: grid;
+  gap: 10rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+@media (max-width: 900px) {
+  .footer__container {
+    padding: 10rem 6rem;
+  }
+}
+.footer__offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+.footer__offer h2, .footer__offer .products__wrapper h1, .products__wrapper .footer__offer h1 {
+  font-weight: 600;
+  color: #e1d4c9;
+}
+.footer__social {
+  display: flex;
+  gap: 1.2rem;
+}
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+.footer__contacts > .contact-item {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  font-weight: 600;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__background {
+  padding: 10rem;
+  border-radius: 4rem;
+  background-size: cover;
+  background-position: center;
+  background-image: url("assets/img/img-hero.jpg");
+}
+@media screen and (max-width: 900px) {
+  .hero__background {
+    padding: 10rem 6rem;
+  }
+}
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 53rem;
+}
+
 .navigation {
   display: flex;
   gap: 4rem;
@@ -398,7 +444,8 @@ h3 {
 }
 
 .promo__wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
   gap: 10rem;
   justify-content: space-between;
   align-items: center;
@@ -412,24 +459,14 @@ h3 {
   display: flex;
   gap: 2rem;
 }
-.promo__image {
-  display: block;
-  max-width: 63rem;
-}
-
-.scale__container {
+.promo__container {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
-.scale__target {
-  transition: all 0.3s ease-in;
-  transform: scale(1.1);
+.promo__image {
+  max-width: 63rem;
   width: 100%;
-}
-.scale__trigger:hover .scale__target {
-  transform: scale(1);
 }
 
 .slider__wrapper {
@@ -455,6 +492,7 @@ h3 {
 }
 .slider__image {
   max-width: 48rem;
+  width: 100%;
   display: block;
 }
 .slider__description {
@@ -468,13 +506,17 @@ h3 {
 .slider__description p {
   text-align: center;
 }
-.slider__btn-left {
-  position: relative;
-  left: 0.4rem;
+@media (min-width: 900px) {
+  .slider__btn-left {
+    position: relative;
+    left: 0.4rem;
+  }
 }
-.slider__btn-right {
-  position: relative;
-  right: 0.4rem;
+@media (min-width: 900px) {
+  .slider__btn-right {
+    position: relative;
+    right: 0.4rem;
+  }
 }
 .slider__controls {
   display: flex;
