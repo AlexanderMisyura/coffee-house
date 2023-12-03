@@ -95,7 +95,7 @@ h3 {
   padding: 0 4rem;
 }
 
-.button-primary, .button-icon-light, .button-icon, .button-app-store, .tab-button {
+.button-primary, .button-icon-light, .button-icon_burger, .button-icon, .button-app-store, .tab-button {
   background-color: #e1d4c9;
   border-radius: 10rem;
   border: none;
@@ -109,17 +109,19 @@ h3 {
   gap: 0.8rem;
   transition: all 0.3s ease-in;
 }
-.button-primary *, .button-icon-light *, .button-icon *, .button-app-store *, .tab-button * {
+.button-primary *, .button-icon-light *, .button-icon_burger *, .button-icon *, .button-app-store *, .tab-button * {
   transition: all 0.3s ease-in;
 }
 
-.button-icon-light, .button-icon, .button-app-store, .tab-button {
+.button-icon-light, .button-icon_burger, .button-icon, .button-app-store, .tab-button {
   background-color: transparent;
   border: 0.1rem solid #665f55;
 }
-.button-icon-light:hover, .button-icon:hover, .button-app-store:hover, .tab-button:hover {
-  cursor: pointer;
-  background-color: #665f55;
+@media (hover: hover) and (pointer: fine) {
+  .button-icon-light:hover, .button-icon_burger:hover, .button-icon:hover, .button-app-store:hover, .tab-button:hover {
+    cursor: pointer;
+    background-color: #665f55;
+  }
 }
 
 .tab-button {
@@ -150,15 +152,27 @@ h3 {
 .tab-button_active:hover {
   cursor: default;
 }
-.tab-button_active, .tab-button:hover:not(.tab-button_active) {
+.tab-button_active {
   border-color: #665f55;
   background-color: #665f55;
 }
-.tab-button_active .tab-button__text, .tab-button:hover:not(.tab-button_active) .tab-button__text {
+.tab-button_active .tab-button__text {
   color: #e1d4c9;
 }
-.tab-button_active .tab-button__icon, .tab-button:hover:not(.tab-button_active) .tab-button__icon {
+.tab-button_active .tab-button__icon {
   background-color: #e1d4c9;
+}
+@media (hover: hover) and (pointer: fine) {
+  .tab-button:hover:not(.tab-button_active) {
+    border-color: #665f55;
+    background-color: #665f55;
+  }
+  .tab-button:hover:not(.tab-button_active) .tab-button__text {
+    color: #e1d4c9;
+  }
+  .tab-button:hover:not(.tab-button_active) .tab-button__icon {
+    background-color: #e1d4c9;
+  }
 }
 
 .button-primary {
@@ -173,12 +187,23 @@ h3 {
   width: 0;
   display: block;
 }
-.button-primary:hover {
-  gap: 0.8rem;
+@media (hover: hover) and (pointer: fine) {
+  .button-primary:hover {
+    gap: 0.8rem;
+  }
+  .button-primary:hover svg {
+    opacity: 1;
+    width: 20px;
+  }
 }
-.button-primary:hover svg {
-  opacity: 1;
-  width: 20px;
+@media (hover: none) and (pointer: coarse) {
+  .button-primary {
+    gap: 0.8rem;
+  }
+  .button-primary svg {
+    opacity: 1;
+    width: 20px;
+  }
 }
 
 .button-app-store {
@@ -192,19 +217,44 @@ h3 {
   align-items: flex-start;
   gap: 0.2rem;
 }
-.button-app-store:hover span {
-  color: #e1d4c9;
-}
-.button-app-store:hover path {
-  fill: #e1d4c9;
+@media (hover: hover) and (pointer: fine) {
+  .button-app-store:hover span {
+    color: #e1d4c9;
+  }
+  .button-app-store:hover path {
+    fill: #e1d4c9;
+  }
 }
 
 .button-icon {
   width: 6rem;
   height: 6rem;
 }
-.button-icon:hover path {
-  stroke: #e1d4c9;
+.button-icon_burger {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 4.4rem;
+  height: 4.4rem;
+  border: 0.1rem solid #665f55;
+  border-radius: 10rem;
+}
+.button-icon_burger .burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1rem;
+}
+.button-icon_burger .burger__top {
+  height: 0.2rem;
+}
+.button-icon_burger .burger__bottom {
+  height: 0.2rem;
+}
+@media (hover: hover) and (pointer: fine) {
+  .button-icon:hover path {
+    stroke: #e1d4c9;
+  }
 }
 
 .button-icon-light {
@@ -212,11 +262,13 @@ h3 {
   height: 6rem;
   border-color: #c1b6ad;
 }
-.button-icon-light:hover {
-  background-color: #e1d4c9;
-}
-.button-icon-light:hover path {
-  stroke: #403f3d;
+@media (hover: hover) and (pointer: fine) {
+  .button-icon-light:hover {
+    background-color: #e1d4c9;
+  }
+  .button-icon-light:hover path {
+    stroke: #403f3d;
+  }
 }
 
 .card {
@@ -406,6 +458,22 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .header__menu-link {
+    display: flex;
+  }
+  .header__menu-button {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .header__menu-link {
+    display: none;
+  }
+  .header__menu-button {
+    display: flex;
+  }
+}
 
 .hero__background {
   padding: 10rem;
@@ -430,6 +498,11 @@ h3 {
   display: flex;
   gap: 4rem;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
 }
 
 .products__wrapper {

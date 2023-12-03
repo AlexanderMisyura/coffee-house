@@ -1,9 +1,9 @@
 .navigation {
-  @media (min-width: 900px) {
-    display: flex;
-    gap: 4rem;
-    align-items: center;
-  }
+  display: flex;
+  gap: 4rem;
+  align-items: center;
 
-  display: none;
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }

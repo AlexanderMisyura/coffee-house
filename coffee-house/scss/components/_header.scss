@@ -7,16 +7,16 @@
     align-items: center;
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: $tablet-width) {
     &__menu-link {
-      display: block;
+      display: flex;
     }
 
     &__menu-button {
       display: none;
     }
   }
-  @media (max-width: 899px) {
+  @media (max-width: $tablet-width) {
     &__menu-link {
       display: none;
     }
