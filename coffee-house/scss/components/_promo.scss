@@ -1,7 +1,8 @@
 .promo {
 
   &__wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
     gap: 10rem;
     justify-content: space-between;
     align-items: center;
@@ -18,8 +19,14 @@
     gap: 2rem;
   }
 
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__image {
-    display: block;
     max-width: 63rem;
+    width: 100%;
   }
 }
