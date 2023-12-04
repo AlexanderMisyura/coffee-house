@@ -392,11 +392,15 @@ h3 {
 }
 @media (max-width: 600px) {
   .scale__target {
-    width: auto;
     transform: none;
   }
   .about .scale__target {
     transform: none;
+  }
+}
+@media (max-width: 450px) {
+  .scale__target {
+    width: auto;
   }
 }
 @media (hover: hover) and (pointer: fine) {
@@ -433,7 +437,7 @@ h3 {
     aspect-ratio: 1.1661016949;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 450px) {
   .about__grid__cell {
     aspect-ratio: 0.5898305085;
   }

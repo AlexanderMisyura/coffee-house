@@ -27,7 +27,7 @@
         aspect-ratio: $img-aspect-ratio-tablet;
       }
 
-      @media (max-width: $custom-small-width) {
+      @media (max-width: $custom-extra-width) {
         aspect-ratio: $img-aspect-ratio-mobile;
       }
 
