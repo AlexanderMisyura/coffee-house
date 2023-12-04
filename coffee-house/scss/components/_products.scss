@@ -12,4 +12,18 @@
       max-width: 80rem;
     }
   }
+
+  &__refresh-icon {
+    display: none;
+
+    @media (max-width: $tablet-width) {
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10rem;
+      border: 0.1rem solid $clr-border-dark;
+    }
+  }
 }
