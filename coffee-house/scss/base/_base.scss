@@ -30,12 +30,21 @@ h1 {
   font-size: 7.2rem;
   font-weight: 600;
   line-height: 1.05;
+
+  @media (max-width: $custom-small-width) {
+    font-size: 4.2rem;
+    line-height: 1.15;
+  }
 }
 
 h2 {
   font-size: 6rem;
   font-weight: 600;
   line-height: 1.25;
+
+  @media (max-width:$custom-small-width) {
+    font-size: 3.2rem;
+  }
 }
 
 .main {
