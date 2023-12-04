@@ -5,7 +5,7 @@
   border: 0.1rem solid $clr-border-light;
   border-radius: 4rem;
 
-  @media (max-width: $custom-mid-width) {
+  @media (max-width: $tablet-width) {
     &_hidden {
       display: none;
     }

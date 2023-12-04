@@ -32,7 +32,11 @@
         border-radius: 2rem;
         aspect-ratio: $img-small-aspect-ratio-desktop;
 
-        @media screen and (max-width: $custom-mid-width) {
+        @media (max-width: $custom-mid-width) {
+          aspect-ratio: $img-big-aspect-ratio-tablet;
+        }
+
+        @media screen and (max-width: $tablet-width) {
           display: none;
         }
       }
