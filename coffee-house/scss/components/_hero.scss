@@ -7,8 +7,12 @@
     background-position: center;
     background-image: url("assets/img/img-hero.jpg");
 
-    @media screen and (max-width: 900px) {
+    @media (max-width: $custom-mid-width) {
       padding: 10rem 6rem;
+    }
+
+    @media (max-width: $custom-small-width) {
+      padding: 6rem 1.6rem;
     }
   }
 

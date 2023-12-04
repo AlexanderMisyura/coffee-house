@@ -16,6 +16,14 @@
         transform: scale(1.055);
       }
     }
+
+    @media (max-width: $custom-small-width) {
+      width: auto;
+      transform: none;
+      .about & {
+        transform: none;
+      }
+    }
   }
 
   @media (hover: hover) and (pointer: fine) {

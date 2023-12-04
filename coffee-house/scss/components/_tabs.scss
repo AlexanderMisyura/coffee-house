@@ -8,5 +8,9 @@
   &__switchers {
     display: flex;
     gap: 1.45rem;
+
+    @media (max-width: $custom-small-width) {
+      gap: 0.8rem;
+    }
   }
 }

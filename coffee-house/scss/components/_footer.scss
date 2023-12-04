@@ -9,10 +9,15 @@
   gap: 10rem;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
-  @media (max-width: 900px) {
+  @media (max-width: $custom-mid-width) {
     padding: 10rem 6rem;
   }
- }
+
+  @media (max-width: $custom-small-width) {
+    padding: 6rem 1.6rem;
+    gap: 4rem;
+  }
+}
 
   &__offer {
     display: flex;
