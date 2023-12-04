@@ -45,11 +45,22 @@ h1 {
   font-weight: 600;
   line-height: 1.05;
 }
+@media (max-width: 600px) {
+  h1 {
+    font-size: 4.2rem;
+    line-height: 1.15;
+  }
+}
 
 h2, .products__wrapper h1 {
   font-size: 6rem;
   font-weight: 600;
   line-height: 1.25;
+}
+@media (max-width: 600px) {
+  h2, .products__wrapper h1 {
+    font-size: 3.2rem;
+  }
 }
 
 .main {
@@ -96,6 +107,11 @@ h3 {
   max-width: 1440px;
   margin: auto;
   padding: 0 4rem;
+}
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 0 1.6rem;
+  }
 }
 
 .button-primary, .button-icon-light, .button-icon_burger, .button-icon, .button-app-store, .tab-button {
@@ -369,6 +385,15 @@ h3 {
     transform: scale(1.055);
   }
 }
+@media (max-width: 600px) {
+  .scale__target {
+    width: auto;
+    transform: none;
+  }
+  .about .scale__target {
+    transform: none;
+  }
+}
 @media (hover: hover) and (pointer: fine) {
   .scale__trigger:hover .scale__target {
     transform: scale(1);
@@ -403,6 +428,11 @@ h3 {
     aspect-ratio: 1.1661016949;
   }
 }
+@media (max-width: 600px) {
+  .about__grid__cell {
+    aspect-ratio: 0.5898305085;
+  }
+}
 .about__grid__cell_small {
   border-radius: 2rem;
   aspect-ratio: 1.5348837209;
@@ -432,6 +462,12 @@ h3 {
 @media (max-width: 900px) {
   .footer__container {
     padding: 10rem 6rem;
+  }
+}
+@media (max-width: 600px) {
+  .footer__container {
+    padding: 6rem 1.6rem;
+    gap: 4rem;
   }
 }
 .footer__offer {
@@ -499,9 +535,14 @@ h3 {
   background-position: center;
   background-image: url("assets/img/img-hero.jpg");
 }
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
   .hero__background {
     padding: 10rem 6rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero__background {
+    padding: 6rem 1.6rem;
   }
 }
 .hero__text {
@@ -554,6 +595,12 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 600px) {
+  .promo__wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(348px, 1fr));
+    gap: 4rem;
+  }
+}
 .promo__text {
   display: flex;
   flex-direction: column;
@@ -562,6 +609,7 @@ h3 {
 .promo__buttons {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .promo__container {
   display: flex;
@@ -616,10 +664,20 @@ h3 {
     left: 0.4rem;
   }
 }
+@media (max-width: 600px) {
+  .slider__btn-left {
+    display: none;
+  }
+}
 @media (min-width: 900px) {
   .slider__btn-right {
     position: relative;
     right: 0.4rem;
+  }
+}
+@media (max-width: 600px) {
+  .slider__btn-right {
+    display: none;
   }
 }
 .slider__controls {
@@ -650,6 +708,11 @@ h3 {
 .tabs__switchers {
   display: flex;
   gap: 1.45rem;
+}
+@media (max-width: 600px) {
+  .tabs__switchers {
+    gap: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
