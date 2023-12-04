@@ -18,11 +18,15 @@
     }
 
     @media (max-width: $custom-small-width) {
-      width: auto;
+      // width: auto;
       transform: none;
       .about & {
         transform: none;
       }
+    }
+
+    @media (max-width: $custom-extra-width) {
+      width: auto;
     }
   }
 
