@@ -1,5 +1,4 @@
 .about {
-
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -10,7 +9,7 @@
     display: flex;
     gap: 4rem;
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: $custom-mid-width) {
       flex-direction: column;
     }
 
@@ -24,15 +23,23 @@
       border-radius: 2rem;
       aspect-ratio: $img-big-aspect-ratio-desktop;
 
-      @media (max-width: 900px) {
-        aspect-ratio: $img-big-aspect-ratio-tablet;
+      @media (max-width: $custom-mid-width) {
+        aspect-ratio: $img-aspect-ratio-tablet;
+      }
+
+      @media (max-width: $custom-small-width) {
+        aspect-ratio: $img-aspect-ratio-mobile;
       }
 
       &_small {
         border-radius: 2rem;
         aspect-ratio: $img-small-aspect-ratio-desktop;
 
-        @media screen and (max-width: 900px) {
+        @media (max-width: $custom-mid-width) {
+          aspect-ratio: $img-aspect-ratio-tablet;
+        }
+
+        @media screen and (max-width: $tablet-width) {
           display: none;
         }
       }

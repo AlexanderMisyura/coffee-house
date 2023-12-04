@@ -44,16 +44,24 @@
   }
 
   &__btn-left {
-    @media (min-width: 900px) {
+    @media (min-width: $custom-mid-width) {
       position: relative;
       left: 0.4rem;
+    }
+
+    @media (max-width: $custom-small-width) {
+      display: none;
     }
   }
 
   &__btn-right {
-    @media (min-width: 900px) {
+    @media (min-width: $custom-mid-width) {
       position: relative;
       right: 0.4rem;
+    }
+
+    @media (max-width: $custom-small-width) {
+      display: none;
     }
   }
 

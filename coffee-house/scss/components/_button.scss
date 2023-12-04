@@ -11,6 +11,7 @@
   align-items: center;
   gap: 0.8rem;
   transition: $transition;
+  font-family: inherit;
 
   & * {
     transition: $transition;
@@ -166,6 +167,12 @@
     border: 0.1rem solid $clr-border-dark;
     border-radius: 10rem;
 
+    @media (hover: hover) and (pointer: fine) {
+      &:hover path {
+        stroke: $clr-text-light;
+      }
+    }
+
     .burger {
       display: flex;
       flex-direction: column;
@@ -213,7 +220,6 @@
   border-color: $clr-border-light;
 
   @media (hover: hover) and (pointer: fine) {
-
     &:hover {
       background-color: $clr-bg-body;
     }
