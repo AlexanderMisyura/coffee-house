@@ -10,7 +10,7 @@
     display: flex;
     gap: 4rem;
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: $custom-mid-width) {
       flex-direction: column;
     }
 
@@ -24,7 +24,7 @@
       border-radius: 2rem;
       aspect-ratio: $img-big-aspect-ratio-desktop;
 
-      @media (max-width: 900px) {
+      @media (max-width: $custom-mid-width) {
         aspect-ratio: $img-big-aspect-ratio-tablet;
       }
 
@@ -32,7 +32,7 @@
         border-radius: 2rem;
         aspect-ratio: $img-small-aspect-ratio-desktop;
 
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: $custom-mid-width) {
           display: none;
         }
       }
