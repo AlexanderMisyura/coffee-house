@@ -259,6 +259,11 @@ h3 {
   border: 0.1rem solid #665f55;
   border-radius: 10rem;
 }
+@media (hover: hover) and (pointer: fine) {
+  .button-icon_burger:hover path {
+    stroke: #e1d4c9;
+  }
+}
 .button-icon_burger .burger {
   display: flex;
   flex-direction: column;
