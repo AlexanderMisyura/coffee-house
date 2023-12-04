@@ -11,6 +11,7 @@
   align-items: center;
   gap: 0.8rem;
   transition: $transition;
+  font-family: inherit;
 
   & * {
     transition: $transition;
