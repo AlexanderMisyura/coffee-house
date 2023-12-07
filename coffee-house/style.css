@@ -26,6 +26,7 @@ body {
   font-family: Inter, Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
+  color: #403f3d;
 }
 
 .text-link-like {
@@ -34,6 +35,7 @@ body {
 
 .text-link-like,
 a {
+  color: #403f3d;
   text-decoration: none;
   font-weight: 600;
   display: flex;
@@ -52,21 +54,15 @@ h1 {
   }
 }
 
-h2, .products__wrapper h1 {
+h2, .products__title {
   font-size: 6rem;
   font-weight: 600;
   line-height: 1.25;
 }
 @media (max-width: 600px) {
-  h2, .products__wrapper h1 {
+  h2, .products__title {
     font-size: 3.2rem;
   }
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 10rem;
 }
 
 h3 {
@@ -75,13 +71,15 @@ h3 {
   line-height: 1.25;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
 .text_accent {
   color: #b0907a;
   font-style: italic;
-}
-
-.text_dark {
-  color: #403f3d;
 }
 
 .text_light {
@@ -485,8 +483,7 @@ h3 {
   justify-content: center;
   gap: 4rem;
 }
-.footer__offer h2, .footer__offer .products__wrapper h1, .products__wrapper .footer__offer h1 {
-  font-weight: 600;
+.footer__title {
   color: #e1d4c9;
 }
 .footer__social {
@@ -578,7 +575,7 @@ h3 {
   gap: 4rem;
   align-items: center;
 }
-.products__wrapper h1 {
+.products__title {
   text-align: center;
   max-width: 80rem;
 }
@@ -663,8 +660,6 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 1.6rem;
-}
-.slider__description p {
   text-align: center;
 }
 @media (min-width: 900px) {

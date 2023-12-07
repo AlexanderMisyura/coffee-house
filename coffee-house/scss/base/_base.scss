@@ -12,6 +12,7 @@ body {
   font-family: Inter, Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
+  color: $clr-text-dark;
 }
 
 .text-link-like {
@@ -20,6 +21,7 @@ body {
 
 .text-link-like,
 a {
+  color: $clr-text-dark;
   text-decoration: none;
   font-weight: 600;
   display: flex;
@@ -42,15 +44,9 @@ h2 {
   font-weight: 600;
   line-height: 1.25;
 
-  @media (max-width:$custom-small-width) {
+  @media (max-width: $custom-small-width) {
     font-size: 3.2rem;
   }
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 10rem;
 }
 
 h3 {
@@ -59,13 +55,15 @@ h3 {
   line-height: 1.25;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+
 .text_accent {
   color: $clr-text-accent;
   font-style: italic;
-}
-
-.text_dark {
-  color: $clr-text-dark;
 }
 
 .text_light {

@@ -2,34 +2,32 @@
   margin-top: 10rem;
 
   &__container {
-  border-radius: 4rem;
-  background-color: $clr-bg-container;
-  padding: 10rem;
-  display: grid;
-  gap: 10rem;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    border-radius: 4rem;
+    background-color: $clr-bg-container;
+    padding: 10rem;
+    display: grid;
+    gap: 10rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
-  @media (max-width: $custom-mid-width) {
-    padding: 10rem 6rem;
-  }
+    @media (max-width: $custom-mid-width) {
+      padding: 10rem 6rem;
+    }
 
-  @media (max-width: $custom-small-width) {
-    padding: 6rem 1.6rem;
-    gap: 4rem;
+    @media (max-width: $custom-small-width) {
+      padding: 6rem 1.6rem;
+      gap: 4rem;
+    }
   }
-}
 
   &__offer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
+  }
 
-    h2 {
-      font-weight: 600;
-      color: $clr-text-light;
-    }
-
+  &__title {
+    color: $clr-text-light;
   }
 
   &__social {
@@ -42,7 +40,6 @@
     flex-direction: column;
     justify-content: center;
     gap: 4rem;
-
   }
 
   &__contacts {
@@ -59,10 +56,3 @@
     }
   }
 }
-
-
-
-
-
-
-
