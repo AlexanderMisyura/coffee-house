@@ -55,6 +55,10 @@ h3 {
   line-height: 1.25;
 }
 
+.scroll-disabled {
+  overflow: hidden;
+}
+
 .main {
   display: flex;
   flex-direction: column;
