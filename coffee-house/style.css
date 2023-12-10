@@ -71,8 +71,10 @@ h3 {
   line-height: 1.25;
 }
 
-.scroll-disabled {
-  overflow: hidden;
+@media (max-width: 768px) {
+  .scroll-disabled {
+    overflow: hidden;
+  }
 }
 
 .main {

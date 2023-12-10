@@ -56,7 +56,9 @@ h3 {
 }
 
 .scroll-disabled {
-  overflow: hidden;
+  @media (max-width: $tablet-width) {
+    overflow: hidden;
+  }
 }
 
 .main {
