@@ -186,24 +186,17 @@
       &__bottom {
         height: 0.2rem;
       }
-
-      // &_default {
-
-      // }
-      // &:active {
-      // }
-
-      // &:active,
-      // &__cross {
-      //   .burger__top {
-      //     transform: rotate(45deg) translateX(1.45rem) translateY(-0.15rem);
-      //   }
-
-      //   .burger__bottom {
-      //     transform: rotate(-45deg) translateX(-0.85rem) translateY(-0.7rem);
-      //   }
-      // }
     }
+
+    &__cross {
+        .burger__top {
+          transform: rotate(45deg) translateX(1.45rem) translateY(-0.15rem);
+        }
+
+        .burger__bottom {
+          transform: rotate(-45deg) translateX(-0.85rem) translateY(-0.7rem);
+        }
+      }
   }
 
   @media (hover: hover) and (pointer: fine) {

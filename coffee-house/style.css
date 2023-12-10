@@ -71,6 +71,12 @@ h3 {
   line-height: 1.25;
 }
 
+@media (max-width: 768px) {
+  .scroll-disabled {
+    overflow: hidden;
+  }
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -273,6 +279,12 @@ h3 {
 }
 .button-icon_burger .burger__bottom {
   height: 0.2rem;
+}
+.button-icon_burger__cross .burger__top {
+  transform: rotate(45deg) translateX(1.45rem) translateY(-0.15rem);
+}
+.button-icon_burger__cross .burger__bottom {
+  transform: rotate(-45deg) translateX(-0.85rem) translateY(-0.7rem);
 }
 @media (hover: hover) and (pointer: fine) {
   .button-icon:hover path {
@@ -534,20 +546,30 @@ h3 {
   }
 }
 
-.hero__background {
+.hero__container {
+  position: relative;
+  border-radius: 4rem;
+  overflow: hidden;
+}
+.hero__background-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+.hero__text-container {
   padding: 10rem;
   border-radius: 4rem;
-  background-size: cover;
-  background-position: center;
-  background-image: url("assets/img/img-hero.jpg");
 }
 @media (max-width: 900px) {
-  .hero__background {
+  .hero__text-container {
     padding: 10rem 6rem;
   }
 }
 @media (max-width: 600px) {
-  .hero__background {
+  .hero__text-container {
     padding: 6rem 1.6rem;
   }
 }
@@ -593,6 +615,12 @@ h3 {
     border: 0.1rem solid #665f55;
   }
 }
+.products__refresh-icon.products__refresh-icon_fetch-made {
+  display: none;
+}
+.products__refresh-icon.products__refresh-icon_no-fetch {
+  display: none;
+}
 
 .promo__wrapper {
   display: grid;
@@ -625,6 +653,56 @@ h3 {
 .promo__image {
   max-width: 63rem;
   width: 100%;
+}
+
+.sidebar {
+  display: none;
+  position: absolute;
+  font-size: 0;
+  font-weight: 600;
+  line-height: 1.25;
+  background-color: #e1d4c9;
+  top: 9.9rem;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  transition: all 0.3s ease-in;
+  overflow: hidden;
+  z-index: 1;
+}
+.sidebar__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.sidebar__navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+.sidebar__button {
+  display: flex;
+  gap: 1.6rem;
+}
+.sidebar__button .sidebar__button__icon {
+  transition: all 0.3s ease-in;
+  width: 0;
+}
+.sidebar__active {
+  font-size: 3.2rem;
+  width: 100%;
+}
+.sidebar__active .sidebar__button .sidebar__button__icon {
+  width: 41px;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: block;
+  }
 }
 
 .slider__wrapper {

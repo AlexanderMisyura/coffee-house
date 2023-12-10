@@ -59,11 +59,38 @@
       </div>
     </header>
 
+    <aside class="sidebar">
+      <div class="wrapper sidebar__wrapper">
+        <nav class="sidebar__navigation">
+          <ul class="navigation sidebar__navigation">
+            <li>
+              <a href="#favorite-coffee">Favorite coffee</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#mobile-app">Mobile app</a>
+            </li>
+            <li>
+              <a href="#contact-us">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar__buttons">
+            <a class="sidebar__button" href="./menu/">
+              Menu <img class="sidebar__button__icon" src="assets/icons/coffee-cup-big.svg" alt="coffee cup">
+            </a>
+      </div>
+    </aside>
+
     <main class="main">
       <section class="hero">
         <div class="wrapper">
-          <div class="hero__background">
-            <div class="hero__text text_light">
+          <div class="hero__container">
+            <video class="hero__background-video" src="assets/video/video(720p).mp4" autoplay muted loop poster="assets/img/img-hero.jpg"></video>
+            <div class="hero__text-container">
+              <div class="hero__text text_light">
               <h1>
                 <span class="text_accent">Enjoy</span> premium coffee at our
                 charming cafe
@@ -112,6 +139,7 @@
                       stroke-linejoin="round"
                     /></svg></span
               ></a>
+            </div>
             </div>
           </div>
         </div>
@@ -475,5 +503,6 @@
         </div>
       </div>
     </footer>
+    <script src="scripts/sidebar.js"></script>
   </body>
 </html>

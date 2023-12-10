@@ -55,6 +55,12 @@ h3 {
   line-height: 1.25;
 }
 
+.scroll-disabled {
+  @media (max-width: $tablet-width) {
+    overflow: hidden;
+  }
+}
+
 .main {
   display: flex;
   flex-direction: column;
