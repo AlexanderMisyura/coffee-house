@@ -25,4 +25,13 @@
       border: 0.1rem solid $clr-border-dark;
     }
   }
+
+  &__refresh-icon.products__refresh-icon_fetch-made {
+    display: none;
+  }
+
+  &__refresh-icon.products__refresh-icon_no-fetch {
+    display: none;
+  }
+
 }

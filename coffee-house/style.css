@@ -615,6 +615,12 @@ h3 {
     border: 0.1rem solid #665f55;
   }
 }
+.products__refresh-icon.products__refresh-icon_fetch-made {
+  display: none;
+}
+.products__refresh-icon.products__refresh-icon_no-fetch {
+  display: none;
+}
 
 .promo__wrapper {
   display: grid;
