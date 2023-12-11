@@ -45,12 +45,12 @@
 
     &_next {
       opacity: 0;
-      transform: translate(-100%) scale(65%);
+      transform: translate(100%) scale(65%);
     }
 
     &_prev {
       opacity: 0;
-      transform: translate(100%) scale(65%);
+      transform: translate(-100%) scale(65%);
     }
   }
 
