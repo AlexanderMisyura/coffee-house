@@ -289,12 +289,12 @@ input[type=checkbox]:checked + .modal-button {
   height: 1rem;
 }
 .button-icon_burger .burger__top {
-  width: 16px;
+  width: 18px;
   height: 0;
   border: 1px solid #665f55;
 }
 .button-icon_burger .burger__bottom {
-  width: 16px;
+  width: 18px;
   height: 0;
   border: 1px solid #665f55;
 }
@@ -305,8 +305,8 @@ input[type=checkbox]:checked + .modal-button {
   transform: rotate(-45deg) translate(3px, -3px);
 }
 @media (hover: hover) and (pointer: fine) {
-  .button-icon:hover path {
-    stroke: #e1d4c9;
+  .button-icon_burger:hover .burger__top, .button-icon_burger:hover .burger__bottom {
+    border-color: #e1d4c9;
   }
 }
 
