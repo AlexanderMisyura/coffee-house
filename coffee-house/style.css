@@ -71,6 +71,12 @@ h3 {
   line-height: 1.25;
 }
 
+button {
+  font: inherit;
+  background-color: inherit;
+  color: inherit;
+}
+
 @media (max-width: 768px) {
   .scroll-disabled {
     overflow: hidden;
@@ -118,7 +124,7 @@ h3 {
   }
 }
 
-.button-primary, .button-icon-light, .button-icon_burger, .button-icon, .button-app-store, .tab-button {
+.button-primary, .button-icon-light, .button-icon_burger, .button-icon, .button-app-store, .tab-button, .modal-button {
   background-color: #e1d4c9;
   border-radius: 10rem;
   border: none;
@@ -133,22 +139,22 @@ h3 {
   transition: all 0.3s ease-in;
   font-family: inherit;
 }
-.button-primary *, .button-icon-light *, .button-icon_burger *, .button-icon *, .button-app-store *, .tab-button * {
+.button-primary *, .button-icon-light *, .button-icon_burger *, .button-icon *, .button-app-store *, .tab-button *, .modal-button * {
   transition: all 0.3s ease-in;
 }
 
-.button-icon-light, .button-icon_burger, .button-icon, .button-app-store, .tab-button {
+.button-icon-light, .button-icon_burger, .button-icon, .button-app-store, .tab-button, .modal-button {
   background-color: transparent;
   border: 0.1rem solid #665f55;
 }
 @media (hover: hover) and (pointer: fine) {
-  .button-icon-light:hover, .button-icon_burger:hover, .button-icon:hover, .button-app-store:hover, .tab-button:hover {
+  .button-icon-light:hover, .button-icon_burger:hover, .button-icon:hover, .button-app-store:hover, .tab-button:hover, .modal-button:hover {
     cursor: pointer;
     background-color: #665f55;
   }
 }
 
-.tab-button {
+.tab-button, .modal-button {
   padding: 0.8rem 1.6rem 0.8rem 0.8rem;
   display: inline-flex;
   flex-direction: row;
@@ -157,7 +163,7 @@ h3 {
   width: fit-content;
   height: 4.6rem;
 }
-.tab-button__icon {
+.tab-button__icon, .modal-button__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,36 +173,44 @@ h3 {
   background-color: #c1b6ad;
   border-radius: 10rem;
 }
-.tab-button__text {
+.tab-button__text, .modal-button__text {
   color: #403f3d;
 }
-.tab-button:not(.tab-button_active) {
+.tab-button:not(.tab-button_active):not(.modal-button_active), .modal-button:not(.tab-button_active):not(.modal-button_active) {
   border-color: #c1b6ad;
 }
-.tab-button_active:hover {
+.tab-button_active:hover, .modal-button_active:hover, input:checked + .modal-button:hover {
   cursor: default;
 }
-.tab-button_active {
+.tab-button_active, .modal-button_active, input:checked + .modal-button {
   border-color: #665f55;
   background-color: #665f55;
 }
-.tab-button_active .tab-button__text {
+.tab-button_active .tab-button__text, .modal-button_active .tab-button__text, input:checked + .modal-button .tab-button__text, .tab-button_active .modal-button__text, .modal-button_active .modal-button__text, input:checked + .modal-button .modal-button__text {
   color: #e1d4c9;
 }
-.tab-button_active .tab-button__icon {
+.tab-button_active .tab-button__icon, .modal-button_active .tab-button__icon, input:checked + .modal-button .tab-button__icon, .tab-button_active .modal-button__icon, .modal-button_active .modal-button__icon, input:checked + .modal-button .modal-button__icon {
   background-color: #e1d4c9;
 }
 @media (hover: hover) and (pointer: fine) {
-  .tab-button:hover:not(.tab-button_active) {
+  .tab-button:hover, .modal-button:hover {
     border-color: #665f55;
     background-color: #665f55;
   }
-  .tab-button:hover:not(.tab-button_active) .tab-button__text {
+  .tab-button:hover .tab-button__text, .tab-button:hover .modal-button__text, .modal-button:hover .tab-button__text, .modal-button:hover .modal-button__text {
     color: #e1d4c9;
   }
-  .tab-button:hover:not(.tab-button_active) .tab-button__icon {
+  .tab-button:hover .tab-button__icon, .tab-button:hover .modal-button__icon, .modal-button:hover .tab-button__icon, .modal-button:hover .modal-button__icon {
     background-color: #e1d4c9;
   }
+}
+
+.modal-button_wide {
+  width: 100%;
+  padding: 1rem 7.8rem;
+}
+input[type=checkbox]:checked + .modal-button {
+  cursor: pointer;
 }
 
 .button-primary {
@@ -331,6 +345,7 @@ h3 {
   padding: 2rem;
   width: 100%;
   height: 100%;
+  text-align: left;
 }
 .card__title {
   display: flex;
@@ -578,6 +593,107 @@ h3 {
   flex-direction: column;
   gap: 4rem;
   max-width: 53rem;
+}
+
+.modal {
+  border: none;
+  border-radius: 4rem;
+  color: #403f3d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal__wrapper {
+  min-width: 80rem;
+  background-color: #e1d4c9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.6rem;
+}
+@media (max-width: 900px) {
+  .modal__wrapper {
+    min-width: 89vw;
+    max-width: 68.8rem;
+  }
+}
+@media (max-width: 450px) {
+  .modal__wrapper {
+    min-width: 90vw;
+  }
+}
+.modal__container {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.modal__preview {
+  width: 31rem;
+}
+@media (max-width: 768px) {
+  .modal__preview {
+    max-width: 47.5%;
+    height: inherit;
+  }
+}
+@media (max-width: 600px) {
+  .modal__preview {
+    display: none;
+  }
+}
+.modal__form {
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  flex: 1 0 0;
+}
+@media (max-width: 600px) {
+  .modal__form {
+    padding-left: 0;
+  }
+}
+.modal__title {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.modal__selection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  align-self: stretch;
+}
+.modal__selector {
+  display: none;
+}
+.modal__tab-block {
+  display: flex;
+  align-content: flex-start;
+  gap: 0.7rem;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+.modal__total {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  align-self: stretch;
+  justify-content: space-between;
+}
+.modal__alert {
+  display: flex;
+  padding: 12px 0px;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border-top: 1px solid #c1b6ad;
+}
+.modal::backdrop {
+  background-color: rgba(64, 63, 61, 0.8);
 }
 
 .navigation {

@@ -80,7 +80,7 @@
   }
 
   @media (hover: hover) and (pointer: fine) {
-    &:hover:not(&_active) {
+    &:hover {
       border-color: $clr-bg-container;
       background-color: $clr-bg-container;
 
@@ -92,6 +92,32 @@
         background-color: $clr-bg-body;
       }
     }
+  }
+}
+
+.modal-button {
+  @extend .tab-button;
+
+  &_wide {
+    width: 100%;
+    padding: 1rem 7.8rem;
+  }
+
+  &__icon {
+    @extend .tab-button__icon;
+  }
+
+  &__text {
+    @extend .tab-button__text;
+  }
+
+  &_active,
+  input:checked + & {
+    @extend .tab-button_active;
+  }
+
+  input[type="checkbox"]:checked + & {
+    cursor: pointer;
   }
 }
 
@@ -189,14 +215,14 @@
     }
 
     &__cross {
-        .burger__top {
-          transform: rotate(45deg) translateX(1.45rem) translateY(-0.15rem);
-        }
-
-        .burger__bottom {
-          transform: rotate(-45deg) translateX(-0.85rem) translateY(-0.7rem);
-        }
+      .burger__top {
+        transform: rotate(45deg) translateX(1.45rem) translateY(-0.15rem);
       }
+
+      .burger__bottom {
+        transform: rotate(-45deg) translateX(-0.85rem) translateY(-0.7rem);
+      }
+    }
   }
 
   @media (hover: hover) and (pointer: fine) {

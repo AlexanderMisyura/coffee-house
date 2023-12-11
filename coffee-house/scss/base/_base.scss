@@ -55,6 +55,12 @@ h3 {
   line-height: 1.25;
 }
 
+button {
+  font: inherit;
+  background-color: inherit;
+  color: inherit;
+}
+
 .scroll-disabled {
   @media (max-width: $tablet-width) {
     overflow: hidden;
