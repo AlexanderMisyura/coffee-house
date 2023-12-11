@@ -187,7 +187,7 @@
     @extend %button-transparent;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     width: 4.4rem;
     height: 4.4rem;
     border: 0.1rem solid $clr-border-dark;
@@ -206,21 +206,25 @@
       height: 1rem;
 
       &__top {
-        height: 0.2rem;
+        width: 16px;
+        height: 0;
+        border: 1px solid $clr-border-dark;
       }
 
       &__bottom {
-        height: 0.2rem;
+        width: 16px;
+        height: 0;
+        border: 1px solid $clr-border-dark;
       }
     }
 
     &__cross {
       .burger__top {
-        transform: rotate(45deg) translateX(1.45rem) translateY(-0.15rem);
+        transform: rotate(45deg) translate(3px, 3px);
       }
 
       .burger__bottom {
-        transform: rotate(-45deg) translateX(-0.85rem) translateY(-0.7rem);
+        transform: rotate(-45deg) translate(3px, -3px);
       }
     }
   }

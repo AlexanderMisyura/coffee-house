@@ -271,7 +271,7 @@ input[type=checkbox]:checked + .modal-button {
 .button-icon_burger {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 4.4rem;
   height: 4.4rem;
   border: 0.1rem solid #665f55;
@@ -289,16 +289,20 @@ input[type=checkbox]:checked + .modal-button {
   height: 1rem;
 }
 .button-icon_burger .burger__top {
-  height: 0.2rem;
+  width: 16px;
+  height: 0;
+  border: 1px solid #665f55;
 }
 .button-icon_burger .burger__bottom {
-  height: 0.2rem;
+  width: 16px;
+  height: 0;
+  border: 1px solid #665f55;
 }
 .button-icon_burger__cross .burger__top {
-  transform: rotate(45deg) translateX(1.45rem) translateY(-0.15rem);
+  transform: rotate(45deg) translate(3px, 3px);
 }
 .button-icon_burger__cross .burger__bottom {
-  transform: rotate(-45deg) translateX(-0.85rem) translateY(-0.7rem);
+  transform: rotate(-45deg) translate(3px, -3px);
 }
 @media (hover: hover) and (pointer: fine) {
   .button-icon:hover path {
