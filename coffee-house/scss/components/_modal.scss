@@ -48,7 +48,7 @@
     }
   }
 
-  &__description {
+  &__form {
     padding-left: 2rem;
     display: flex;
     flex-direction: column;
@@ -73,6 +73,10 @@
     align-items: flex-start;
     gap: 0.8rem;
     align-self: stretch;
+  }
+
+  &__selector {
+    display: none;
   }
 
   &__tab-block {

@@ -179,28 +179,28 @@ button {
 .tab-button:not(.tab-button_active):not(.modal-button_active), .modal-button:not(.tab-button_active):not(.modal-button_active) {
   border-color: #c1b6ad;
 }
-.tab-button_active:hover, .modal-button_active:hover {
+.tab-button_active:hover, .modal-button_active:hover, input:checked + .modal-button:hover {
   cursor: default;
 }
-.tab-button_active, .modal-button_active {
+.tab-button_active, .modal-button_active, input:checked + .modal-button {
   border-color: #665f55;
   background-color: #665f55;
 }
-.tab-button_active .tab-button__text, .modal-button_active .tab-button__text, .tab-button_active .modal-button__text, .modal-button_active .modal-button__text {
+.tab-button_active .tab-button__text, .modal-button_active .tab-button__text, input:checked + .modal-button .tab-button__text, .tab-button_active .modal-button__text, .modal-button_active .modal-button__text, input:checked + .modal-button .modal-button__text {
   color: #e1d4c9;
 }
-.tab-button_active .tab-button__icon, .modal-button_active .tab-button__icon, .tab-button_active .modal-button__icon, .modal-button_active .modal-button__icon {
+.tab-button_active .tab-button__icon, .modal-button_active .tab-button__icon, input:checked + .modal-button .tab-button__icon, .tab-button_active .modal-button__icon, .modal-button_active .modal-button__icon, input:checked + .modal-button .modal-button__icon {
   background-color: #e1d4c9;
 }
 @media (hover: hover) and (pointer: fine) {
-  .tab-button:hover:not(.tab-button_active):not(.modal-button_active), .modal-button:hover:not(.tab-button_active):not(.modal-button_active) {
+  .tab-button:hover, .modal-button:hover {
     border-color: #665f55;
     background-color: #665f55;
   }
-  .tab-button:hover:not(.tab-button_active):not(.modal-button_active) .tab-button__text, .tab-button:hover:not(.tab-button_active):not(.modal-button_active) .modal-button__text, .modal-button:hover:not(.tab-button_active):not(.modal-button_active) .tab-button__text, .modal-button:hover:not(.tab-button_active):not(.modal-button_active) .modal-button__text {
+  .tab-button:hover .tab-button__text, .tab-button:hover .modal-button__text, .modal-button:hover .tab-button__text, .modal-button:hover .modal-button__text {
     color: #e1d4c9;
   }
-  .tab-button:hover:not(.tab-button_active):not(.modal-button_active) .tab-button__icon, .tab-button:hover:not(.tab-button_active):not(.modal-button_active) .modal-button__icon, .modal-button:hover:not(.tab-button_active):not(.modal-button_active) .tab-button__icon, .modal-button:hover:not(.tab-button_active):not(.modal-button_active) .modal-button__icon {
+  .tab-button:hover .tab-button__icon, .tab-button:hover .modal-button__icon, .modal-button:hover .tab-button__icon, .modal-button:hover .modal-button__icon {
     background-color: #e1d4c9;
   }
 }
@@ -209,6 +209,10 @@ button {
   width: 100%;
   padding: 1rem 7.8rem;
 }
+input[type=checkbox]:checked + .modal-button {
+  cursor: pointer;
+}
+
 .button-primary {
   padding: 2rem 7.8rem;
   display: flex;
@@ -638,7 +642,7 @@ button {
     display: none;
   }
 }
-.modal__description {
+.modal__form {
   padding-left: 2rem;
   display: flex;
   flex-direction: column;
@@ -647,7 +651,7 @@ button {
   flex: 1 0 0;
 }
 @media (max-width: 600px) {
-  .modal__description {
+  .modal__form {
     padding-left: 0;
   }
 }
@@ -662,6 +666,9 @@ button {
   align-items: flex-start;
   gap: 0.8rem;
   align-self: stretch;
+}
+.modal__selector {
+  display: none;
 }
 .modal__tab-block {
   display: flex;

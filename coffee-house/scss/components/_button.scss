@@ -80,7 +80,7 @@
   }
 
   @media (hover: hover) and (pointer: fine) {
-    &:hover:not(&_active) {
+    &:hover {
       border-color: $clr-bg-container;
       background-color: $clr-bg-container;
 
@@ -111,8 +111,13 @@
     @extend .tab-button__text;
   }
 
-  &_active {
+  &_active,
+  input:checked + & {
     @extend .tab-button_active;
+  }
+
+  input[type="checkbox"]:checked + & {
+    cursor: pointer;
   }
 }
 
