@@ -183,6 +183,12 @@
   width: 6rem;
   height: 6rem;
 
+  @media (hover: hover) and (pointer: fine) {
+    &:hover path {
+      stroke: $clr-text-light;
+    }
+  }
+
   &_burger {
     @extend %button-transparent;
     display: flex;
