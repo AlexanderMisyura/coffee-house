@@ -95,6 +95,27 @@
   }
 }
 
+.modal-button {
+  @extend .tab-button;
+
+  &_wide {
+    width: 100%;
+    padding: 1rem 7.8rem;
+  }
+
+  &__icon {
+    @extend .tab-button__icon;
+  }
+
+  &__text {
+    @extend .tab-button__text;
+  }
+
+  &_active {
+    @extend .tab-button_active;
+  }
+}
+
 .button-primary {
   @extend %button;
 
@@ -189,14 +210,14 @@
     }
 
     &__cross {
-        .burger__top {
-          transform: rotate(45deg) translateX(1.45rem) translateY(-0.15rem);
-        }
-
-        .burger__bottom {
-          transform: rotate(-45deg) translateX(-0.85rem) translateY(-0.7rem);
-        }
+      .burger__top {
+        transform: rotate(45deg) translateX(1.45rem) translateY(-0.15rem);
       }
+
+      .burger__bottom {
+        transform: rotate(-45deg) translateX(-0.85rem) translateY(-0.7rem);
+      }
+    }
   }
 
   @media (hover: hover) and (pointer: fine) {

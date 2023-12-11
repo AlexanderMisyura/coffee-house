@@ -99,7 +99,8 @@ async function generateProductsTiles(productsContainer, category) {
     productsContainer.append(card);
   });
   function createProductCard(product, position) {
-    const card = document.createElement("div");
+    const card = document.createElement("button");
+    card.setAttribute("popovertarget", "modal");
     card.classList.add("card", "scale__trigger");
     if (position > 3) {
       card.classList.add("card_hidden", "card_subloaded");
