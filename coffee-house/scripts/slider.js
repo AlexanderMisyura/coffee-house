@@ -67,4 +67,77 @@ function slider() {
     moveCarousel();
     startInterval();
   });
+
+  // hover-freeze functionality not working for now
+
+  // row.addEventListener("mouseover", (e) => {
+  //   const activeSliderItem = e.target.closest(".slider__item_active");
+  //   if (!activeSliderItem) return;
+  //   console.log("in")
+  //   clearInterval(timerId);
+  // })
+  // row.addEventListener("mouseout", (e) => {
+  //   const activeSliderItem = e.target.closest(".slider__item_active");
+  //   if (!activeSliderItem) return;
+  //   console.log("out")
+  //   startInterval();
+  // });
+
+  handleSwipe();
+  function handleSwipe() {
+    let xTouch;
+    let yTouch;
+    let xSwipe;
+    let ySwipe;
+
+    row.addEventListener("touchstart", (e) => {
+      const activeSliderItem = e.target.closest(".slider__item_active");
+      if (!activeSliderItem) {
+        xTouch = null;
+        yTouch = null;
+        xSwipe = null;
+        ySwipe = null;
+        return;
+      }
+
+      xTouch = e.touches[0].clientX;
+      yTouch = e.touches[0].clientY;
+      console.log("xTouch, yTouch", xTouch, yTouch);
+    });
+
+    row.addEventListener("touchmove", (e) => {
+      const activeSliderItem = e.target.closest(".slider__item_active");
+      if (!activeSliderItem || !xTouch || !yTouch) {
+        xTouch = null;
+        yTouch = null;
+        xSwipe = null;
+        ySwipe = null;
+        return;
+      }
+
+      xSwipe = e.touches[0].clientX;
+      ySwipe = e.touches[0].clientY;
+
+      const deltaX = xSwipe - xTouch;
+      const deltaY = ySwipe - yTouch;
+
+      console.log(xTouch, yTouch, xSwipe, ySwipe);
+
+      if (Math.abs(deltaX) <= Math.abs(deltaY)) return;
+
+      if (deltaX > 0) {
+        clearInterval(timerId);
+        activeIndex = activeIndex + 1 > sliderLength - 1 ? 0 : activeIndex + 1;
+        prevIndex = activeIndex + 1 > sliderLength - 1 ? 0 : activeIndex + 1;
+        moveCarousel();
+        startInterval();
+      } else {
+        clearInterval(timerId);
+        activeIndex = activeIndex - 1 < 0 ? sliderLength - 1 : activeIndex - 1;
+        prevIndex = activeIndex + 1 > sliderLength - 1 ? 0 : activeIndex + 1;
+        moveCarousel();
+        startInterval();
+      }
+    });
+  }
 }
