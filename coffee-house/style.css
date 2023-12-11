@@ -869,11 +869,11 @@ input[type=checkbox]:checked + .modal-button {
 }
 .slider__item_next {
   opacity: 0;
-  transform: translate(-100%) scale(65%);
+  transform: translate(100%) scale(65%);
 }
 .slider__item_prev {
   opacity: 0;
-  transform: translate(100%) scale(65%);
+  transform: translate(-100%) scale(65%);
 }
 .slider__image {
   max-width: 48rem;
