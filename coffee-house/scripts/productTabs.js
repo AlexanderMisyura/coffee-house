@@ -17,7 +17,8 @@ window.addEventListener("resize", () => {
 
 document.getElementById("modal").addEventListener("toggle", () => {
   const windowWidthBefore = document.documentElement.clientWidth;
-  document.body.classList.toggle("scroll-disabled");
+  document.body.classList.toggle("scroll-block-modal");
+  document.body.classList.toggle("modal-open");
   const windowWidthAfter = document.documentElement.clientWidth;
 
   if (windowWidthBefore < windowWidthAfter) {
