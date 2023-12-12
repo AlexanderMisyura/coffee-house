@@ -67,6 +67,10 @@ button {
   }
 }
 
+.scroll-block-modal {
+  overflow: hidden;
+}
+
 .main {
   display: flex;
   flex-direction: column;
