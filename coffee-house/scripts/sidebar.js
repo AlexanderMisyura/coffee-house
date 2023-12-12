@@ -21,7 +21,11 @@ function toggleMenu() {
 
 const sidebarNav = document.querySelector(".sidebar__navigation");
 sidebarNav.addEventListener("click", (e) => {
-  if(e.target.nodeName === "A") closeMenu();
+  if (e.target.nodeName === "A") closeMenu();
+});
+
+document.querySelector(".sidebar__button").addEventListener("click", () => {
+  closeMenu();
 });
 
 function closeMenu() {
