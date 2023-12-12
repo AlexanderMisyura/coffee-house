@@ -33,7 +33,6 @@ const productsContainer = document.querySelector(".products__tab");
 productsContainer.addEventListener("click", showProduct);
 
 async function showProduct(e) {
-  // e.preventDefault();
   const cardId = e.target.closest("[popovertarget='modal']")?.dataset?.id;
   if (!cardId) return;
 
@@ -42,7 +41,6 @@ async function showProduct(e) {
   ).find((product) => product.id === Number(cardId));
 
   openModal(product);
-  // create modal create backdrop block scroll
 }
 
 function openModal(data) {
@@ -318,7 +316,7 @@ async function generateProductsTiles(productsContainer, category) {
                     <h3>${product.name}</h3>
                     <p>${product.description}</p>
                   </div>
-                  <h3 class="product-price">$${product.price}</h3>
+                  <h3 class="product-price">$${(product.price / 100).toFixed(2)}</h3>
                 </div>`;
 
     return card;

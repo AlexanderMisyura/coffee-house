@@ -613,6 +613,7 @@ input[type=checkbox]:checked + .modal-button {
   transform: translate(-50%, -50%);
 }
 .modal__wrapper {
+  max-width: 80rem;
   min-width: 80rem;
   background-color: #e1d4c9;
   display: flex;
