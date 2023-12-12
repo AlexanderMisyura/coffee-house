@@ -109,19 +109,15 @@ function slider() {
   handlePause();
   function handlePause() {
     row.addEventListener("mouseover", (e) => {
-      const activeSliderItem = e.target.closest(".slider__item_active");
+      const activeSliderItem = e.target.closest(".slider__item_active > img");
       if (!activeSliderItem) return;
       clearInterval(timerId);
       clearInterval(intervalId);
       clearTimeout(timeoutId);
-      // console.log(
-      //   "timePassed",
-      //   timePassed
-      // );
     });
 
     row.addEventListener("mouseout", (e) => {
-      const activeSliderItem = e.target.closest(".slider__item_active");
+      const activeSliderItem = e.target.closest(".slider__item_active > img");
       if (!activeSliderItem) return;
 
       startTimer(timePassed);
@@ -142,7 +138,7 @@ function slider() {
     row.addEventListener(
       "touchstart",
       (e) => {
-        const activeSliderItem = e.target.closest(".slider__item_active");
+        const activeSliderItem = e.target.closest(".slider__item_active > img");
         if (!activeSliderItem) return;
         clearInterval(timerId);
         clearInterval(intervalId);
@@ -153,7 +149,7 @@ function slider() {
 
     row.addEventListener("touchend", (e) => {
       e.preventDefault();
-      const activeSliderItem = e.target.closest(".slider__item_active");
+      const activeSliderItem = e.target.closest(".slider__item_active > img");
       if (!activeSliderItem) return;
       startTimer(timePassed);
 
