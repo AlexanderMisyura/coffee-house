@@ -929,10 +929,6 @@ input[type=checkbox]:checked + .modal-button {
   border-radius: 10rem;
   position: relative;
 }
-.slider__control_active .slider__filler {
-  width: 100%;
-  transition: width 6s linear;
-}
 .slider__filler {
   width: 0;
   height: 0.4rem;

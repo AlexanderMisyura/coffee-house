@@ -104,16 +104,7 @@
     border-radius: 10rem;
     background-color: $clr-border-light;
     border-radius: 10rem;
-
     position: relative;
-
-    &_active {
-      .slider__filler {
-        width: 100%;
-        transition: $sliderInterval;
-      }
-    }
-
   }
 
   &__filler {
