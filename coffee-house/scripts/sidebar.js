@@ -19,14 +19,23 @@ function toggleMenu() {
   sidebar.classList.toggle("sidebar__active");
 }
 
-const sidebarNav = document.querySelector(".sidebar__navigation");
-sidebarNav.addEventListener("click", (e) => {
-  if (e.target.nodeName === "A") closeMenu();
-});
-
-document.querySelector(".sidebar__button").addEventListener("click", () => {
+function followLink(e) {
+  e.preventDefault();
   closeMenu();
-});
+  const targetHref = e.target.closest("a")?.href;
+  if (!targetHref) return;
+  setTimeout(() => {
+    location.href = targetHref;
+  }, 300);
+}
+const sidebarNav = document.querySelector(".sidebar__navigation");
+sidebarNav.addEventListener("click", followLink);
+
+document
+  .querySelector(".sidebar__button")
+  .addEventListener("click", followLink);
+
+document.querySelector(".logo").addEventListener("click", followLink);
 
 function closeMenu() {
   document.body.classList.remove("scroll-disabled");
