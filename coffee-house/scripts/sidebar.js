@@ -44,3 +44,7 @@ function closeMenu() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.classList.remove("sidebar__active");
 }
+
+window.addEventListener("resize", () => {
+  if (document.documentElement.clientWidth > 768) closeMenu();
+});
